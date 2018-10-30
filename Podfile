@@ -6,6 +6,7 @@ target 'questionOfTheDayHen' do
   use_frameworks!
 
   pod 'Firebase/Core'
+  pod 'FirebaseUI'
 
   target 'questionOfTheDayHenTests' do
     inherit! :search_paths
