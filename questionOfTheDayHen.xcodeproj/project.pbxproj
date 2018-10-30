@@ -14,6 +14,10 @@
 		6E3184F32188B4170086EB5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3184F12188B4170086EB5D /* LaunchScreen.storyboard */; };
 		6E3184FE2188B4170086EB5D /* questionOfTheDayHenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3184FD2188B4170086EB5D /* questionOfTheDayHenTests.swift */; };
 		6E3185092188B4170086EB5D /* questionOfTheDayHenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */; };
+		6EC52BC32188C5580075057E /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */; };
+		C9A5DF81D7E8D8A8EF7B8C11 /* Pods_questionOfTheDayHenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961860E218D3DE12E6D49257 /* Pods_questionOfTheDayHenUITests.framework */; };
+		CEA741F9AB9505847E9C367F /* Pods_questionOfTheDayHenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4202DD68DFE814D168A1E9 /* Pods_questionOfTheDayHenTests.framework */; };
+		FDCE45CE496BC7E0E06CD343 /* Pods_questionOfTheDayHen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2909C3AB1A5DB8FAAEBC84DF /* Pods_questionOfTheDayHen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2909C3AB1A5DB8FAAEBC84DF /* Pods_questionOfTheDayHen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_questionOfTheDayHen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2950D00E9ADE031AA1CD1321 /* Pods-questionOfTheDayHenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-questionOfTheDayHenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-questionOfTheDayHenUITests/Pods-questionOfTheDayHenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2A0A401B6D5BE3FD140EAEF3 /* Pods-questionOfTheDayHenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-questionOfTheDayHenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-questionOfTheDayHenUITests/Pods-questionOfTheDayHenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E3184E52188B4160086EB5D /* questionOfTheDayHen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = questionOfTheDayHen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3184E82188B4160086EB5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E3184EA2188B4160086EB5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		6E3185042188B4170086EB5D /* questionOfTheDayHenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = questionOfTheDayHenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionOfTheDayHenUITests.swift; sourceTree = "<group>"; };
 		6E31850A2188B4170086EB5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		961860E218D3DE12E6D49257 /* Pods_questionOfTheDayHenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_questionOfTheDayHenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADDA6124363BBC531F4EE8B /* Pods-questionOfTheDayHen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-questionOfTheDayHen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-questionOfTheDayHen/Pods-questionOfTheDayHen.debug.xcconfig"; sourceTree = "<group>"; };
+		AC4202DD68DFE814D168A1E9 /* Pods_questionOfTheDayHenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_questionOfTheDayHenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDDC61CC3CBC64D10E6E0A61 /* Pods-questionOfTheDayHen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-questionOfTheDayHen.release.xcconfig"; path = "Pods/Target Support Files/Pods-questionOfTheDayHen/Pods-questionOfTheDayHen.release.xcconfig"; sourceTree = "<group>"; };
+		D1CF9CC2DD74210D2CF7B65F /* Pods-questionOfTheDayHenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-questionOfTheDayHenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-questionOfTheDayHenTests/Pods-questionOfTheDayHenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F525F66004B7639E481A4E66 /* Pods-questionOfTheDayHenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-questionOfTheDayHenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-questionOfTheDayHenTests/Pods-questionOfTheDayHenTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCE45CE496BC7E0E06CD343 /* Pods_questionOfTheDayHen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA741F9AB9505847E9C367F /* Pods_questionOfTheDayHenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A5DF81D7E8D8A8EF7B8C11 /* Pods_questionOfTheDayHenUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55A63A369BBC2DF607F19FA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2909C3AB1A5DB8FAAEBC84DF /* Pods_questionOfTheDayHen.framework */,
+				AC4202DD68DFE814D168A1E9 /* Pods_questionOfTheDayHenTests.framework */,
+				961860E218D3DE12E6D49257 /* Pods_questionOfTheDayHenUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6E3184DC2188B4160086EB5D = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +108,8 @@
 				6E3184FC2188B4170086EB5D /* questionOfTheDayHenTests */,
 				6E3185072188B4170086EB5D /* questionOfTheDayHenUITests */,
 				6E3184E62188B4160086EB5D /* Products */,
+				8049954A6C083145EC4B473E /* Pods */,
+				55A63A369BBC2DF607F19FA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +132,7 @@
 				6E3184EF2188B4170086EB5D /* Assets.xcassets */,
 				6E3184F12188B4170086EB5D /* LaunchScreen.storyboard */,
 				6E3184F42188B4170086EB5D /* Info.plist */,
+				6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */,
 			);
 			path = questionOfTheDayHen;
 			sourceTree = "<group>";
@@ -125,6 +155,19 @@
 			path = questionOfTheDayHenUITests;
 			sourceTree = "<group>";
 		};
+		8049954A6C083145EC4B473E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AADDA6124363BBC531F4EE8B /* Pods-questionOfTheDayHen.debug.xcconfig */,
+				CDDC61CC3CBC64D10E6E0A61 /* Pods-questionOfTheDayHen.release.xcconfig */,
+				D1CF9CC2DD74210D2CF7B65F /* Pods-questionOfTheDayHenTests.debug.xcconfig */,
+				F525F66004B7639E481A4E66 /* Pods-questionOfTheDayHenTests.release.xcconfig */,
+				2A0A401B6D5BE3FD140EAEF3 /* Pods-questionOfTheDayHenUITests.debug.xcconfig */,
+				2950D00E9ADE031AA1CD1321 /* Pods-questionOfTheDayHenUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E31850D2188B4170086EB5D /* Build configuration list for PBXNativeTarget "questionOfTheDayHen" */;
 			buildPhases = (
+				695D7AF894023860ADC02844 /* [CP] Check Pods Manifest.lock */,
 				6E3184E12188B4160086EB5D /* Sources */,
 				6E3184E22188B4160086EB5D /* Frameworks */,
 				6E3184E32188B4160086EB5D /* Resources */,
+				3833463CA6E106BD4B4AD8AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E3185102188B4170086EB5D /* Build configuration list for PBXNativeTarget "questionOfTheDayHenTests" */;
 			buildPhases = (
+				487A3E469CDBBC93C140D021 /* [CP] Check Pods Manifest.lock */,
 				6E3184F52188B4170086EB5D /* Sources */,
 				6E3184F62188B4170086EB5D /* Frameworks */,
 				6E3184F72188B4170086EB5D /* Resources */,
@@ -167,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E3185132188B4170086EB5D /* Build configuration list for PBXNativeTarget "questionOfTheDayHenUITests" */;
 			buildPhases = (
+				8A9DA4FD255B604C0F0987DB /* [CP] Check Pods Manifest.lock */,
 				6E3185002188B4170086EB5D /* Sources */,
 				6E3185012188B4170086EB5D /* Frameworks */,
 				6E3185022188B4170086EB5D /* Resources */,
@@ -232,6 +279,7 @@
 				6E3184F32188B4170086EB5D /* LaunchScreen.storyboard in Resources */,
 				6E3184F02188B4170086EB5D /* Assets.xcassets in Resources */,
 				6E3184EE2188B4160086EB5D /* Main.storyboard in Resources */,
+				6EC52BC32188C5580075057E /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +298,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3833463CA6E106BD4B4AD8AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-questionOfTheDayHen/Pods-questionOfTheDayHen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-questionOfTheDayHen/Pods-questionOfTheDayHen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		487A3E469CDBBC93C140D021 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-questionOfTheDayHenTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		695D7AF894023860ADC02844 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-questionOfTheDayHen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A9DA4FD255B604C0F0987DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-questionOfTheDayHenUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E3184E12188B4160086EB5D /* Sources */ = {
@@ -428,6 +569,7 @@
 		};
 		6E31850E2188B4170086EB5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AADDA6124363BBC531F4EE8B /* Pods-questionOfTheDayHen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +588,7 @@
 		};
 		6E31850F2188B4170086EB5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDDC61CC3CBC64D10E6E0A61 /* Pods-questionOfTheDayHen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +607,7 @@
 		};
 		6E3185112188B4170086EB5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1CF9CC2DD74210D2CF7B65F /* Pods-questionOfTheDayHenTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +629,7 @@
 		};
 		6E3185122188B4170086EB5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F525F66004B7639E481A4E66 /* Pods-questionOfTheDayHenTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +651,7 @@
 		};
 		6E3185142188B4170086EB5D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A0A401B6D5BE3FD140EAEF3 /* Pods-questionOfTheDayHenUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +672,7 @@
 		};
 		6E3185152188B4170086EB5D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2950D00E9ADE031AA1CD1321 /* Pods-questionOfTheDayHenUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

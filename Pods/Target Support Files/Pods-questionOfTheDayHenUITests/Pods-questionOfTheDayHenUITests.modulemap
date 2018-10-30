@@ -1,0 +1,6 @@
+framework module Pods_questionOfTheDayHenUITests {
+  umbrella header "Pods-questionOfTheDayHenUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
