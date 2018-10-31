@@ -15,6 +15,9 @@
 		6E3184FE2188B4170086EB5D /* questionOfTheDayHenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3184FD2188B4170086EB5D /* questionOfTheDayHenTests.swift */; };
 		6E3185092188B4170086EB5D /* questionOfTheDayHenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */; };
 		6EC52BC32188C5580075057E /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */; };
+		6EEEC5E9218A003D00A7EE0B /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEC5E8218A003D00A7EE0B /* FirebaseAuth.framework */; };
+		6EEEC5EB218A007000A7EE0B /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEC5EA218A007000A7EE0B /* FirebaseCore.framework */; };
+		6EEEC5ED218A007A00A7EE0B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEC5EC218A007A00A7EE0B /* FBSDKLoginKit.framework */; };
 		C9A5DF81D7E8D8A8EF7B8C11 /* Pods_questionOfTheDayHenUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961860E218D3DE12E6D49257 /* Pods_questionOfTheDayHenUITests.framework */; };
 		CEA741F9AB9505847E9C367F /* Pods_questionOfTheDayHenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4202DD68DFE814D168A1E9 /* Pods_questionOfTheDayHenTests.framework */; };
 		FDCE45CE496BC7E0E06CD343 /* Pods_questionOfTheDayHen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2909C3AB1A5DB8FAAEBC84DF /* Pods_questionOfTheDayHen.framework */; };
@@ -55,6 +58,9 @@
 		6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionOfTheDayHenUITests.swift; sourceTree = "<group>"; };
 		6E31850A2188B4170086EB5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		6EEEC5E8218A003D00A7EE0B /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EEEC5EA218A007000A7EE0B /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EEEC5EC218A007A00A7EE0B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		961860E218D3DE12E6D49257 /* Pods_questionOfTheDayHenUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_questionOfTheDayHenUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADDA6124363BBC531F4EE8B /* Pods-questionOfTheDayHen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-questionOfTheDayHen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-questionOfTheDayHen/Pods-questionOfTheDayHen.debug.xcconfig"; sourceTree = "<group>"; };
 		AC4202DD68DFE814D168A1E9 /* Pods_questionOfTheDayHenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_questionOfTheDayHenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EEEC5ED218A007A00A7EE0B /* FBSDKLoginKit.framework in Frameworks */,
+				6EEEC5EB218A007000A7EE0B /* FirebaseCore.framework in Frameworks */,
+				6EEEC5E9218A003D00A7EE0B /* FirebaseAuth.framework in Frameworks */,
 				FDCE45CE496BC7E0E06CD343 /* Pods_questionOfTheDayHen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +103,9 @@
 		55A63A369BBC2DF607F19FA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6EEEC5EC218A007A00A7EE0B /* FBSDKLoginKit.framework */,
+				6EEEC5EA218A007000A7EE0B /* FirebaseCore.framework */,
+				6EEEC5E8218A003D00A7EE0B /* FirebaseAuth.framework */,
 				2909C3AB1A5DB8FAAEBC84DF /* Pods_questionOfTheDayHen.framework */,
 				AC4202DD68DFE814D168A1E9 /* Pods_questionOfTheDayHenTests.framework */,
 				961860E218D3DE12E6D49257 /* Pods_questionOfTheDayHenUITests.framework */,
@@ -306,8 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-questionOfTheDayHen/Pods-questionOfTheDayHen-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
@@ -331,8 +341,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
@@ -364,15 +372,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-questionOfTheDayHenTests-checkManifestLockResult.txt",
 			);
@@ -386,8 +390,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-questionOfTheDayHen/Pods-questionOfTheDayHen-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
@@ -400,8 +402,6 @@
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
@@ -422,15 +422,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-questionOfTheDayHen-checkManifestLockResult.txt",
 			);
@@ -444,15 +440,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-questionOfTheDayHenUITests-checkManifestLockResult.txt",
 			);
