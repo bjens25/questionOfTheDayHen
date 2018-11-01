@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 
 class ViewController: UIViewController {
@@ -15,8 +17,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var actionButton: UIButton!
     
-    @IBAction func action(_ sender: UIButton) {
-        
+    @IBAction func action(_ sender: UIButton)
+    {
+        if segmentControl.selectedSegmentIndex == 0
+        {
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
+                //
+            }
+        }
+        else if segmentControl.selectedSegmentIndex == 1
+        {
+            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!)
+            {
+                (authResult, error) in
+                guard let user = authResult?.user else {return}
+            }
+        }
     }
     
     override func viewDidLoad() {

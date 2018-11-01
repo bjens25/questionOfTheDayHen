@@ -14,7 +14,7 @@
 		6E3184F32188B4170086EB5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3184F12188B4170086EB5D /* LaunchScreen.storyboard */; };
 		6E3184FE2188B4170086EB5D /* questionOfTheDayHenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3184FD2188B4170086EB5D /* questionOfTheDayHenTests.swift */; };
 		6E3185092188B4170086EB5D /* questionOfTheDayHenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */; };
-		6EC52BC32188C5580075057E /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */; };
+		6EC4BA76218B511000DA23CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EC52BC22188C5580075057E /* GoogleService-Info.plist */; };
 		6EEEC5E9218A003D00A7EE0B /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEC5E8218A003D00A7EE0B /* FirebaseAuth.framework */; };
 		6EEEC5EB218A007000A7EE0B /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEC5EA218A007000A7EE0B /* FirebaseCore.framework */; };
 		6EEEC5ED218A007A00A7EE0B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEEC5EC218A007A00A7EE0B /* FBSDKLoginKit.framework */; };
@@ -57,7 +57,7 @@
 		6E3185042188B4170086EB5D /* questionOfTheDayHenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = questionOfTheDayHenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionOfTheDayHenUITests.swift; sourceTree = "<group>"; };
 		6E31850A2188B4170086EB5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		6EC52BC22188C5580075057E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EEEC5E8218A003D00A7EE0B /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EEEC5EA218A007000A7EE0B /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EEEC5EC218A007A00A7EE0B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +144,7 @@
 				6E3184EF2188B4170086EB5D /* Assets.xcassets */,
 				6E3184F12188B4170086EB5D /* LaunchScreen.storyboard */,
 				6E3184F42188B4170086EB5D /* Info.plist */,
-				6EC52BC22188C5580075057E /* GoogleService-Info (1).plist */,
+				6EC52BC22188C5580075057E /* GoogleService-Info.plist */,
 			);
 			path = questionOfTheDayHen;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 				6E3184F32188B4170086EB5D /* LaunchScreen.storyboard in Resources */,
 				6E3184F02188B4170086EB5D /* Assets.xcassets in Resources */,
 				6E3184EE2188B4160086EB5D /* Main.storyboard in Resources */,
-				6EC52BC32188C5580075057E /* GoogleService-Info (1).plist in Resources */,
+				6EC4BA76218B511000DA23CE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

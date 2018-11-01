@@ -53,7 +53,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="action" destination="Bbm-Go-iYs" id="7XY-fO-re1"/>
                         <outlet property="actionButton" destination="Bbm-Go-iYs" id="55W-Ub-MFG"/>
                         <outlet property="emailText" destination="IUv-08-1Kd" id="LNE-mB-IQP"/>
                         <outlet property="passwordText" destination="PL7-Po-BDR" id="24r-f4-0wc"/>
