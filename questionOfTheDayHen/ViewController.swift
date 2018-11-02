@@ -15,23 +15,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var actionButton: UIButton!
     
-    @IBAction func action(_ sender: UIButton)
-    {
-        if segmentControl.selectedSegmentIndex == 0
-        {
-            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
-                //
-            }
-        }
-        else if segmentControl.selectedSegmentIndex == 1
-        {
-            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!)
-            {
-                (authResult, error) in
-                guard (authResult?.user) != nil else {return}
-            }
-        }
-    }
+  //  @IBAction func action(_ sender: UIButton)
+//    {
+//        if segmentControl.selectedSegmentIndex == 0
+//        {
+//            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
+//                //
+//            }
+//        }
+//        else if segmentControl.selectedSegmentIndex == 1
+//        {
+//
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

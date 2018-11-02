@@ -21,3 +21,12 @@ class SignUpViewController: UIViewController {
 
 
 }
+    @IBAction func signIN(_ sender: UIButton) {
+        
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
+        {
+            (authResult, error) in
+            guard (authResult?.user) != nil else {return}
+        }
+    }
+}
