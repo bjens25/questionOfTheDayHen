@@ -12,9 +12,7 @@ import FirebaseAuth
 
 
 class ViewController: UIViewController {
-    @IBOutlet weak var emailText: UITextField!
-    @IBOutlet weak var passwordText: UITextField!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
+    
     @IBOutlet weak var actionButton: UIButton!
     
     @IBAction func action(_ sender: UIButton)
@@ -39,7 +37,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
 
 }
 
