@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!)
             {
                 (authResult, error) in
-                guard let user = authResult?.user else {return}
+                guard (authResult?.user) != nil else {return}
             }
         }
     }
