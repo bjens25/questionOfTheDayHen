@@ -14,6 +14,7 @@
 		6E3184F32188B4170086EB5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3184F12188B4170086EB5D /* LaunchScreen.storyboard */; };
 		6E3184FE2188B4170086EB5D /* questionOfTheDayHenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3184FD2188B4170086EB5D /* questionOfTheDayHenTests.swift */; };
 		6E3185092188B4170086EB5D /* questionOfTheDayHenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */; };
+		6E3ACD0D2190A3710034370C /* classCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3ACD0C2190A3710034370C /* classCodeViewController.swift */; };
 		6E46A4DF218CA120002CFABA /* ClassesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E46A4DE218CA120002CFABA /* ClassesViewController.swift */; };
 		6E46A4E1218CA21F002CFABA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E46A4E0218CA21F002CFABA /* SignUpViewController.swift */; };
 		6E46A4E3218CA25C002CFABA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E46A4E2218CA25C002CFABA /* LoginViewController.swift */; };
@@ -60,6 +61,7 @@
 		6E3185042188B4170086EB5D /* questionOfTheDayHenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = questionOfTheDayHenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3185082188B4170086EB5D /* questionOfTheDayHenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionOfTheDayHenUITests.swift; sourceTree = "<group>"; };
 		6E31850A2188B4170086EB5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E3ACD0C2190A3710034370C /* classCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classCodeViewController.swift; sourceTree = "<group>"; };
 		6E46A4DE218CA120002CFABA /* ClassesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesViewController.swift; sourceTree = "<group>"; };
 		6E46A4E0218CA21F002CFABA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6E46A4E2218CA25C002CFABA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				6E3184E82188B4160086EB5D /* AppDelegate.swift */,
 				6E3184EA2188B4160086EB5D /* ViewController.swift */,
 				6E3184EC2188B4160086EB5D /* Main.storyboard */,
+				6E3ACD0C2190A3710034370C /* classCodeViewController.swift */,
 				6E46A4E2218CA25C002CFABA /* LoginViewController.swift */,
 				6E46A4E0218CA21F002CFABA /* SignUpViewController.swift */,
 				6E46A4DE218CA120002CFABA /* ClassesViewController.swift */,
@@ -473,6 +476,7 @@
 				6E46A4DF218CA120002CFABA /* ClassesViewController.swift in Sources */,
 				6E46A4E1218CA21F002CFABA /* SignUpViewController.swift in Sources */,
 				6E46A4E3218CA25C002CFABA /* LoginViewController.swift in Sources */,
+				6E3ACD0D2190A3710034370C /* classCodeViewController.swift in Sources */,
 				6E3184E92188B4160086EB5D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
