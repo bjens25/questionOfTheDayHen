@@ -72,12 +72,12 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN9-f3-wd2">
-                                <rect key="frame" x="160" y="384" width="55" height="30"/>
+                                <rect key="frame" x="126" y="384" width="89" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signIN:" destination="ugc-ay-W6n" eventType="touchUpInside" id="yAj-sW-k8l"/>
-                                    <segue destination="aDZ-nt-Esz" kind="show" id="Psu-b9-0BT"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gba-hr-9r3"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nqY-Wd-1Zf">
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vlA-6G-b7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="-916"/>
+            <point key="canvasLocation" x="1997.5999999999999" y="-916.1919040479761"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="VYl-Kh-n1o">
@@ -268,7 +268,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Psu-b9-0BT"/>
+        <segue reference="t7y-zy-dZC"/>
         <segue reference="DI0-2D-n6u"/>
+        <segue reference="gba-hr-9r3"/>
     </inferredMetricsTieBreakers>
 </document>
