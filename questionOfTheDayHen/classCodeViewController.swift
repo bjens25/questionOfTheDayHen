@@ -15,6 +15,7 @@ class classCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.enterButton.layer.cornerRadius = 15
         
     }
     
