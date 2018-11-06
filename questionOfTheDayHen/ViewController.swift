@@ -15,19 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var actionButton: UIButton!
     
-  //  @IBAction func action(_ sender: UIButton)
-//    {
-//        if segmentControl.selectedSegmentIndex == 0
-//        {
-//            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
-//                //
-//            }
-//        }
-//        else if segmentControl.selectedSegmentIndex == 1
-//        {
-//
-//        }
-//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

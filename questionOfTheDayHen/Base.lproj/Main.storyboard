@@ -380,6 +380,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="EiG-62-q3r"/>
         <segue reference="t7y-zy-dZC"/>
         <segue reference="DI0-2D-n6u"/>
         <segue reference="gba-hr-9r3"/>
