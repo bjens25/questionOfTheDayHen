@@ -20,12 +20,25 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        optionA.setTitle("Option A", for: .normal)
+        optionB.setTitle("Option B", for: .normal)
+        optionC.setTitle("Option C", for: .normal)
+        optionD.setTitle("Option D", for: .normal)
         // Do any additional setup after loading the view.
     }
 
-    
+    @IBAction func onATapped(_ sender: UIButton) {
+    }
 
+    @IBAction func onBTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func onCTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func onDTapped(_ sender: UIButton) {
+    }
+    @IBOutlet weak var onSubmitTapped: UIButton!
     /*
     // MARK: - Navigation
 
