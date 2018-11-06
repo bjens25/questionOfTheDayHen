@@ -173,6 +173,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="2Kx-oW-OaP" kind="show" id="4Un-98-dtv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -195,6 +198,102 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c82-0B-Ntt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3506" y="-564"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="IIG-eM-NxB">
+            <objects>
+                <viewController id="2Kx-oW-OaP" customClass="QuestionViewController" customModule="questionOfTheDayHen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P0Y-yH-Hj6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0H-tU-Iz7">
+                                <rect key="frame" x="21" y="139" width="162" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onATapped:" destination="2Kx-oW-OaP" eventType="touchUpInside" id="ycL-qz-YAo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-dJ-WHS">
+                                <rect key="frame" x="21" y="229" width="162" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCTapped:" destination="2Kx-oW-OaP" eventType="touchUpInside" id="Ch5-FH-twA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-cM-vh9">
+                                <rect key="frame" x="191" y="229" width="162" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDTapped:" destination="2Kx-oW-OaP" eventType="touchUpInside" id="Qdy-rq-G1O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YL-FU-FFh">
+                                <rect key="frame" x="191" y="139" width="162" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBTapped:" destination="2Kx-oW-OaP" eventType="touchUpInside" id="w79-At-uqe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ng-K9-8yu">
+                                <rect key="frame" x="107" y="70" width="161" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLo-tr-Kd2">
+                                <rect key="frame" x="10" y="353" width="354" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3X-Gz-8LR">
+                                <rect key="frame" x="121" y="427" width="133" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gLH-5A-Xcb"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="TLo-tr-Kd2" id="qrq-I2-weC"/>
+                        <outlet property="onSubmitTapped" destination="L3X-Gz-8LR" id="Ew3-yw-5gv"/>
+                        <outlet property="optionA" destination="W0H-tU-Iz7" id="7Q8-gh-YXc"/>
+                        <outlet property="optionB" destination="8YL-FU-FFh" id="0L8-a4-9ND"/>
+                        <outlet property="optionC" destination="2dS-dJ-WHS" id="t3v-kA-ACi"/>
+                        <outlet property="optionD" destination="X1f-cM-vh9" id="MwN-nk-57E"/>
+                        <outlet property="questionLabel" destination="2ng-K9-8yu" id="JNL-24-Rcc"/>
+                        <outlet property="submitButton" destination="L3X-Gz-8LR" id="BfK-cU-5Jy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="00a-Oj-Tck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3504.8000000000002" y="201.94902548725639"/>
         </scene>
         <!--Class Code View Controller-->
         <scene sceneID="Beq-zn-7Y8">
