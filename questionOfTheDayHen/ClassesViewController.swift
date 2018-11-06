@@ -8,12 +8,25 @@
 
 import UIKit
 
-class ClassesViewController: UIViewController {
+class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var classes = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-
 }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return classes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = classes[indexPath.row]
+        return cell
+    }
+    
+    
 }

@@ -27,6 +27,8 @@ class SignUpViewController: UIViewController {
         {
             (authResult, error) in
             guard (authResult?.user) != nil else {return}
+            
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }
