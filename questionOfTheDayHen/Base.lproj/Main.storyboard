@@ -156,7 +156,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="action:" destination="ArT-N4-trP" eventType="touchUpInside" id="Gzz-cS-Efw"/>
+                                    <action selector="logInButton:" destination="ArT-N4-trP" eventType="touchUpInside" id="Vej-ay-jY9"/>
                                     <segue destination="aDZ-nt-Esz" kind="show" id="TM1-EP-b6h"/>
                                 </connections>
                             </button>
@@ -409,8 +409,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EiG-62-q3r"/>
-        <segue reference="t7y-zy-dZC"/>
+        <segue reference="TM1-EP-b6h"/>
         <segue reference="DI0-2D-n6u"/>
         <segue reference="gba-hr-9r3"/>
     </inferredMetricsTieBreakers>
