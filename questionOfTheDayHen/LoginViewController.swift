@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
             guard (authResult?.user) != nil else {return}
             
             self.dismiss(animated: true, completion: nil)
-            //performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            self.performSegue(withIdentifier: "segue", sender: UIButton())
         }
     }
     
