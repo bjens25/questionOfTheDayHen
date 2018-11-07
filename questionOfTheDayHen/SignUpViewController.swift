@@ -12,10 +12,13 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var signUpButtonOutlet: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +26,16 @@ class SignUpViewController: UIViewController {
 
 }
     @IBAction func signIN(_ sender: UIButton) {
-        
+        var passwordOne = passwordTextField.text!
+        var passwordTwo = confirmPasswordTextField.text!
+        if passwordOne != passwordTwo
+        {
+        sender.isHidden = true
+        }
+        else
+        {
+            
+        }
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
         {
             (authResult, error) in
@@ -31,5 +43,9 @@ class SignUpViewController: UIViewController {
             
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    func hiddenButton()
+    {
+        
     }
 }
