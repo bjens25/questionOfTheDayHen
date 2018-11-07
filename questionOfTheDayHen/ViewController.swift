@@ -12,26 +12,41 @@ import FirebaseAuth
 
 
 class ViewController: UIViewController {
+    @IBOutlet weak var adminSignUp: UIButton!
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var adminLogin: UIButton!
+    @IBOutlet weak var studentSignUP: UIButton!
+    @IBOutlet weak var studentLogin: UIButton!
     @IBOutlet weak var actionButton: UIButton!
     
-  //  @IBAction func action(_ sender: UIButton)
+    @IBAction func student_AdminSegmented(_ sender: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            adminLogin.isHidden = true
+            studentLogin.isHidden = false
+            adminSignUp.isHidden = true
+            studentSignUP.isHidden = false
+        case 1:
+            adminLogin.isHidden = false
+            studentLogin.isHidden = true
+            adminSignUp.isHidden = false
+            studentSignUP.isHidden = true
+        default:
+            break;
+        }
+
+    }
+    //  @IBAction func action(_ sender: UIButton)
 //    {
-//        if segmentControl.selectedSegmentIndex == 0
-//        {
-//            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (user, error) in
-//                //
-//            }
-//        }
-//        else if segmentControl.selectedSegmentIndex == 1
-//        {
-//
-//        }
 //    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        adminLogin.isHidden = true
+        studentLogin.isHidden = false
+        adminSignUp.isHidden = true
+        studentSignUP.isHidden = false
     }
 
 }

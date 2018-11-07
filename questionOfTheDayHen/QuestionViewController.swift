@@ -28,15 +28,19 @@ class QuestionViewController: UIViewController {
     }
 
     @IBAction func onATapped(_ sender: UIButton) {
+        answerLabel.text = "Answer: \(optionA.title(for: .normal)!)"
     }
 
     @IBAction func onBTapped(_ sender: UIButton) {
+        answerLabel.text = "Answer: \(optionB.title(for: .normal)!)"
     }
     
     @IBAction func onCTapped(_ sender: UIButton) {
+        answerLabel.text = "Answer: \(optionC.title(for: .normal)!)"
     }
     
     @IBAction func onDTapped(_ sender: UIButton) {
+        answerLabel.text = "Answer: \(optionD.title(for: .normal)!)"
     }
     @IBOutlet weak var onSubmitTapped: UIButton!
     /*
