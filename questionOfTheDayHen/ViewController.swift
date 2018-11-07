@@ -13,7 +13,9 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
     @IBOutlet weak var adminSignUp: UIButton!
-    
+    @IBOutlet weak var adminLogin: UIButton!
+    @IBOutlet weak var studentSignUp: UIButton!
+    @IBOutlet weak var studentLogin: UIButton!
     
 
     
@@ -22,7 +24,7 @@ class ViewController: UIViewController {
         adminLogin.isHidden = true
         studentLogin.isHidden = false
         adminSignUp.isHidden = true
-        studentSignUP.isHidden = false
+        studentSignUp.isHidden = false
     }
 
 }

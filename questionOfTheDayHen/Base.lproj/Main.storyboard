@@ -73,6 +73,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aMJ-o5-aUf"/>
+                    <connections>
+                        <outlet property="adminLogin" destination="pCx-Ds-h0m" id="TOY-Tb-R0h"/>
+                        <outlet property="adminSignUp" destination="qJa-ab-V2J" id="5LY-vv-hhu"/>
+                        <outlet property="studentLogin" destination="Bbm-Go-iYs" id="gwO-0F-fJD"/>
+                        <outlet property="studentSignUp" destination="XJ9-K4-EYv" id="AUL-uh-rVD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -438,7 +444,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TM1-EP-b6h"/>
+        <segue reference="VdO-tL-1RW"/>
+        <segue reference="t7y-zy-dZC"/>
         <segue reference="crk-QA-ceo"/>
         <segue reference="gba-hr-9r3"/>
     </inferredMetricsTieBreakers>
