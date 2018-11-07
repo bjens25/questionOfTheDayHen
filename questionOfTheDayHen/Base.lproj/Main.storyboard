@@ -23,8 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="login"/>
                                 <connections>
-                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q1P-jg-1iy"/>
-                                    <segue destination="ArT-N4-trP" kind="show" id="hjs-A4-ReO"/>
+                                    <segue destination="ArT-N4-trP" kind="show" id="Fka-CA-Y6l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ9-K4-EYv">
@@ -48,9 +47,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aMJ-o5-aUf"/>
-                    <connections>
-                        <outlet property="actionButton" destination="Bbm-Go-iYs" id="55W-Ub-MFG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,8 +152,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="logInButton:" destination="ArT-N4-trP" eventType="touchUpInside" id="Vej-ay-jY9"/>
                                     <segue destination="aDZ-nt-Esz" kind="show" id="TM1-EP-b6h"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-zX-B1R">
+                                <rect key="frame" x="152" y="345" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="logInButton:" destination="ArT-N4-trP" eventType="touchUpInside" id="kAi-A0-mNL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -171,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVN-mh-tMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1998" y="-166"/>
+            <point key="canvasLocation" x="1997.5999999999999" y="-166.8665667166417"/>
         </scene>
         <!--Classes View Controller-->
         <scene sceneID="Qw2-sc-Fi2">
@@ -409,8 +412,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TM1-EP-b6h"/>
-        <segue reference="DI0-2D-n6u"/>
+        <segue reference="VdO-tL-1RW"/>
+        <segue reference="t7y-zy-dZC"/>
+        <segue reference="crk-QA-ceo"/>
         <segue reference="gba-hr-9r3"/>
     </inferredMetricsTieBreakers>
 </document>

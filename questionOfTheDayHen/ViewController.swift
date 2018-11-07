@@ -13,7 +13,6 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var actionButton: UIButton!
     
 
     
