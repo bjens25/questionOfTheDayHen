@@ -152,7 +152,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="aDZ-nt-Esz" kind="show" id="TM1-EP-b6h"/>
+                                    <segue destination="aDZ-nt-Esz" kind="show" identifier="segue" id="TM1-EP-b6h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-zX-B1R">
