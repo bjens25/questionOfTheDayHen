@@ -19,28 +19,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-Go-iYs">
-                                <rect key="frame" x="170" y="273" width="34" height="30"/>
+                                <rect key="frame" x="139" y="273" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="login"/>
+                                <state key="normal" title="Student Login"/>
                                 <connections>
                                     <segue destination="ArT-N4-trP" kind="show" id="Fka-CA-Y6l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ9-K4-EYv">
-                                <rect key="frame" x="162" y="161" width="50" height="30"/>
+                                <rect key="frame" x="131" y="161" width="113" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="sign up"/>
+                                <state key="normal" title="Student Sign Up"/>
                                 <connections>
                                     <segue destination="ugc-ay-W6n" kind="show" id="VdO-tL-1RW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSb-4f-mQa">
-                                <rect key="frame" x="151" y="389" width="72" height="30"/>
+                                <rect key="frame" x="122" y="389" width="130" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Skip Login"/>
+                                <state key="normal" title="Skip Student Login"/>
                                 <connections>
                                     <segue destination="aDZ-nt-Esz" kind="show" id="t7y-zy-dZC"/>
                                 </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wTO-m2-vKX">
+                                <rect key="frame" x="125" y="73" width="125" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Student"/>
+                                    <segment title="Admin"/>
+                                </segments>
+                                <connections>
+                                    <action selector="student_AdminSegmented:" destination="BYZ-38-t0r" eventType="valueChanged" id="prY-94-wSd"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-ab-V2J">
+                                <rect key="frame" x="131" y="161" width="113" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Admin Sign Up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCx-Ds-h0m">
+                                <rect key="frame" x="139" y="273" width="96" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Admin Login"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIw-3n-jpD">
+                                <rect key="frame" x="128" y="427" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Skip Admin Login"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1193" y="-564"/>
+            <point key="canvasLocation" x="1145" y="-1564"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="vrD-NM-dko">
@@ -390,7 +416,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVb-yo-29Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368.80000000000001" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="330" y="-1565"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qET-hi-vbp">

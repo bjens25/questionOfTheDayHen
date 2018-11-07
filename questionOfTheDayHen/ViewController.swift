@@ -12,13 +12,17 @@ import FirebaseAuth
 
 
 class ViewController: UIViewController {
+    @IBOutlet weak var adminSignUp: UIButton!
     
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        adminLogin.isHidden = true
+        studentLogin.isHidden = false
+        adminSignUp.isHidden = true
+        studentSignUP.isHidden = false
     }
 
 }
