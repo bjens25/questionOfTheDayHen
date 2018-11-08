@@ -661,6 +661,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Dqg-CY-8IP" id="0Bq-yQ-MNk"/>
+                                    <outlet property="delegate" destination="Dqg-CY-8IP" id="kw4-n2-Qdj"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
