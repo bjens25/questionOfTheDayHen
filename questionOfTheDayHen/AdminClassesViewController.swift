@@ -8,17 +8,37 @@
 
 import UIKit
 
-class AdminClassesViewController: UIViewController {
+class AdminClassesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var adminClassesTableView: UITableView!
+    var classes = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
     @IBAction func createNewClassAlert(_ sender: UIBarButtonItem) {
+        alert()
     }
     
+    func alert()
+    {
+        let alert = UIAlertController(title: "Add Class?", message: "Fill in the class name.", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) {(action) in
+            let classCodeTextField = alert.textFields![0] as UITextField
+            let classCode = classCodeTextField.text
+            self.classes.append(classCode!)
+            self.adminClassesTableView.reloadData()
+        }
+        let cancelAction =  UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(OKAction)
+        alert.addAction(cancelAction)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Gift Idea"
+        }
+        present(alert, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation
