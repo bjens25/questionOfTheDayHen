@@ -18,6 +18,17 @@ class AdminClassesViewController: UIViewController, UITableViewDataSource, UITab
 
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return classes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let theClass = classes[indexPath.row]
+        cell?.textLabel?.text = theClass
+        return cell!
+    }
+    
     @IBAction func createNewClassAlert(_ sender: UIBarButtonItem) {
         alert()
     }
@@ -35,7 +46,7 @@ class AdminClassesViewController: UIViewController, UITableViewDataSource, UITab
         alert.addAction(OKAction)
         alert.addAction(cancelAction)
         alert.addTextField { (textField) in
-            textField.placeholder = "Gift Idea"
+            textField.placeholder = "Class Code"
         }
         present(alert, animated: true, completion: nil)
     }
