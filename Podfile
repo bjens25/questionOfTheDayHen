@@ -8,6 +8,7 @@ target 'questionOfTheDayHen' do
   pod 'Firebase/Core'
   pod 'FirebaseUI'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'questionOfTheDayHenTests' do
     inherit! :search_paths
