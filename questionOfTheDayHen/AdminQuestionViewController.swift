@@ -15,23 +15,21 @@ class AdminQuestionViewController: UIViewController {
     @IBOutlet weak var adminB: UITextField!
     @IBOutlet weak var adminC: UITextField!
     @IBOutlet weak var adminD: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
     @IBAction func publishToClassOnTap(_ sender: UIButton) {
-        let vc = QuestionViewController()
-        vc.questionLabel.text = adminQuestion.text
-        vc.reloadInputViews()
-    }
+      
+        }
     
 
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

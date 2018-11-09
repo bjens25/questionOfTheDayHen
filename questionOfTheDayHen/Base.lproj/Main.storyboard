@@ -714,6 +714,7 @@
                                 <state key="normal" title="Publish"/>
                                 <connections>
                                     <action selector="publishToClassOnTap:" destination="4ci-Wp-I8k" eventType="touchUpInside" id="ljm-0a-7uv"/>
+                                    <segue destination="2Kx-oW-OaP" kind="show" identifier="segue" id="X5L-nd-pJa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Option A:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuS-7H-SJr">
@@ -810,6 +811,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="3b9-hT-MGJ"/>
         <segue reference="t7y-zy-dZC"/>
+        <segue reference="X5L-nd-pJa"/>
         <segue reference="crk-QA-ceo"/>
         <segue reference="EEn-dN-lQH"/>
     </inferredMetricsTieBreakers>
