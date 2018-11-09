@@ -21,6 +21,9 @@ class AdminQuestionViewController: UIViewController {
     }
 
     @IBAction func publishToClassOnTap(_ sender: UIButton) {
+        let vc = QuestionViewController()
+        vc.questionLabel.text = adminQuestion.text
+        vc.reloadInputViews()
     }
     
 

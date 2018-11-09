@@ -39,16 +39,6 @@
                                     <segue destination="aDZ-nt-Esz" kind="show" id="t7y-zy-dZC"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wTO-m2-vKX">
-                                <rect key="frame" x="125" y="73" width="125" height="29"/>
-                                <segments>
-                                    <segment title="Student"/>
-                                    <segment title="Admin"/>
-                                </segments>
-                                <connections>
-                                    <action selector="student_AdminSegmented:" destination="BYZ-38-t0r" eventType="valueChanged" id="prY-94-wSd"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-ab-V2J">
                                 <rect key="frame" x="131" y="161" width="113" height="30"/>
                                 <state key="normal" title="Admin Sign Up"/>
@@ -56,18 +46,18 @@
                                     <segue destination="vsT-Xb-p9S" kind="show" id="XDH-hH-Ubq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCx-Ds-h0m">
-                                <rect key="frame" x="139" y="273" width="96" height="30"/>
-                                <state key="normal" title="Admin Login"/>
-                                <connections>
-                                    <segue destination="NaH-3f-UOV" kind="show" id="57o-ZW-E1J"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIw-3n-jpD">
                                 <rect key="frame" x="128" y="427" width="119" height="30"/>
                                 <state key="normal" title="Skip Admin Login"/>
                                 <connections>
                                     <segue destination="udP-B0-a01" kind="show" id="3b9-hT-MGJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCx-Ds-h0m">
+                                <rect key="frame" x="139" y="273" width="96" height="30"/>
+                                <state key="normal" title="Admin Login"/>
+                                <connections>
+                                    <segue destination="NaH-3f-UOV" kind="show" id="57o-ZW-E1J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -78,20 +68,15 @@
                             <constraint firstItem="Bbm-Go-iYs" firstAttribute="top" secondItem="XJ9-K4-EYv" secondAttribute="bottom" constant="82" id="413-56-V8C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qJa-ab-V2J" secondAttribute="trailing" constant="131" id="4hv-qp-cOg"/>
                             <constraint firstItem="ZSb-4f-mQa" firstAttribute="top" secondItem="pCx-Ds-h0m" secondAttribute="bottom" constant="86" id="7R5-uz-Sun"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wTO-m2-vKX" secondAttribute="trailing" constant="125" id="91C-VV-PGx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pCx-Ds-h0m" secondAttribute="trailing" constant="140" id="9SN-P7-aBA"/>
-                            <constraint firstItem="qJa-ab-V2J" firstAttribute="top" secondItem="wTO-m2-vKX" secondAttribute="bottom" constant="60" id="G8d-Vz-96O"/>
                             <constraint firstItem="XIw-3n-jpD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="GfG-ZL-tRl"/>
                             <constraint firstItem="pCx-Ds-h0m" firstAttribute="top" secondItem="XJ9-K4-EYv" secondAttribute="bottom" constant="82" id="KEj-qz-UEJ"/>
                             <constraint firstItem="Bbm-Go-iYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="LA0-uq-GWQ"/>
-                            <constraint firstItem="XJ9-K4-EYv" firstAttribute="top" secondItem="wTO-m2-vKX" secondAttribute="bottom" constant="60" id="NKT-Uk-s1f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSb-4f-mQa" secondAttribute="trailing" constant="123" id="P14-Co-FP6"/>
                             <constraint firstItem="ZSb-4f-mQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="PVK-jp-QXG"/>
                             <constraint firstItem="qJa-ab-V2J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="Ui3-pZ-6Pe"/>
                             <constraint firstItem="Bbm-Go-iYs" firstAttribute="top" secondItem="qJa-ab-V2J" secondAttribute="bottom" constant="82" id="WHm-de-fii"/>
-                            <constraint firstItem="wTO-m2-vKX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="Wa7-wf-LiL"/>
                             <constraint firstItem="pCx-Ds-h0m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="XDL-sR-bZU"/>
-                            <constraint firstItem="wTO-m2-vKX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="bja-4k-PAx"/>
                             <constraint firstItem="XJ9-K4-EYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="dCx-zf-AUv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bbm-Go-iYs" secondAttribute="trailing" constant="140" id="eCO-0O-nZS"/>
                             <constraint firstItem="XIw-3n-jpD" firstAttribute="top" secondItem="ZSb-4f-mQa" secondAttribute="bottom" constant="8" id="gs7-3a-qz7"/>
@@ -823,7 +808,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9kZ-KB-r9L"/>
+        <segue reference="3b9-hT-MGJ"/>
         <segue reference="t7y-zy-dZC"/>
         <segue reference="crk-QA-ceo"/>
         <segue reference="EEn-dN-lQH"/>
