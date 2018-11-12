@@ -18,70 +18,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-Go-iYs">
-                                <rect key="frame" x="139" y="273" width="96" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-Go-iYs">
+                                <rect key="frame" x="139" y="257" width="96" height="30"/>
                                 <state key="normal" title="Student Login"/>
                                 <connections>
                                     <segue destination="ArT-N4-trP" kind="show" id="Fka-CA-Y6l"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ9-K4-EYv">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJ9-K4-EYv">
                                 <rect key="frame" x="131" y="161" width="113" height="30"/>
                                 <state key="normal" title="Student Sign Up"/>
                                 <connections>
                                     <segue destination="ugc-ay-W6n" kind="show" id="VdO-tL-1RW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSb-4f-mQa">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSb-4f-mQa">
                                 <rect key="frame" x="122" y="389" width="130" height="30"/>
                                 <state key="normal" title="Skip Student Login"/>
                                 <connections>
                                     <segue destination="aDZ-nt-Esz" kind="show" id="t7y-zy-dZC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-ab-V2J">
-                                <rect key="frame" x="131" y="161" width="113" height="30"/>
-                                <state key="normal" title="Admin Sign Up"/>
-                                <connections>
-                                    <segue destination="vsT-Xb-p9S" kind="show" id="XDH-hH-Ubq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIw-3n-jpD">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIw-3n-jpD">
                                 <rect key="frame" x="128" y="427" width="119" height="30"/>
                                 <state key="normal" title="Skip Admin Login"/>
                                 <connections>
                                     <segue destination="udP-B0-a01" kind="show" id="3b9-hT-MGJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCx-Ds-h0m">
-                                <rect key="frame" x="139" y="273" width="96" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCx-Ds-h0m">
+                                <rect key="frame" x="139" y="295" width="96" height="30"/>
                                 <state key="normal" title="Admin Login"/>
                                 <connections>
                                     <segue destination="NaH-3f-UOV" kind="show" id="57o-ZW-E1J"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJa-ab-V2J">
+                                <rect key="frame" x="131" y="199" width="113" height="30"/>
+                                <state key="normal" title="Admin Sign Up"/>
+                                <connections>
+                                    <segue destination="vsT-Xb-p9S" kind="show" id="XDH-hH-Ubq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XJ9-K4-EYv" secondAttribute="trailing" constant="131" id="0Dg-2d-ygJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XIw-3n-jpD" secondAttribute="bottom" constant="210" id="0FN-pv-Hhh"/>
-                            <constraint firstItem="Bbm-Go-iYs" firstAttribute="top" secondItem="XJ9-K4-EYv" secondAttribute="bottom" constant="82" id="413-56-V8C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qJa-ab-V2J" secondAttribute="trailing" constant="131" id="4hv-qp-cOg"/>
-                            <constraint firstItem="ZSb-4f-mQa" firstAttribute="top" secondItem="pCx-Ds-h0m" secondAttribute="bottom" constant="86" id="7R5-uz-Sun"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pCx-Ds-h0m" secondAttribute="trailing" constant="140" id="9SN-P7-aBA"/>
-                            <constraint firstItem="XIw-3n-jpD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="GfG-ZL-tRl"/>
-                            <constraint firstItem="pCx-Ds-h0m" firstAttribute="top" secondItem="XJ9-K4-EYv" secondAttribute="bottom" constant="82" id="KEj-qz-UEJ"/>
-                            <constraint firstItem="Bbm-Go-iYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="LA0-uq-GWQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSb-4f-mQa" secondAttribute="trailing" constant="123" id="P14-Co-FP6"/>
-                            <constraint firstItem="ZSb-4f-mQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="PVK-jp-QXG"/>
-                            <constraint firstItem="qJa-ab-V2J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="Ui3-pZ-6Pe"/>
-                            <constraint firstItem="Bbm-Go-iYs" firstAttribute="top" secondItem="qJa-ab-V2J" secondAttribute="bottom" constant="82" id="WHm-de-fii"/>
-                            <constraint firstItem="pCx-Ds-h0m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="XDL-sR-bZU"/>
-                            <constraint firstItem="XJ9-K4-EYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="dCx-zf-AUv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bbm-Go-iYs" secondAttribute="trailing" constant="140" id="eCO-0O-nZS"/>
-                            <constraint firstItem="XIw-3n-jpD" firstAttribute="top" secondItem="ZSb-4f-mQa" secondAttribute="bottom" constant="8" id="gs7-3a-qz7"/>
-                            <constraint firstItem="ZSb-4f-mQa" firstAttribute="top" secondItem="Bbm-Go-iYs" secondAttribute="bottom" constant="86" id="mWS-oV-yUi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XIw-3n-jpD" secondAttribute="trailing" constant="128" id="zrp-gL-0xS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pCx-Ds-h0m" secondAttribute="trailing" constant="140" id="0in-aE-5y4"/>
+                            <constraint firstItem="XJ9-K4-EYv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="97" id="Abx-0s-9VM"/>
+                            <constraint firstItem="Bbm-Go-iYs" firstAttribute="top" secondItem="qJa-ab-V2J" secondAttribute="bottom" constant="28" id="DWp-le-Wyd"/>
+                            <constraint firstItem="qJa-ab-V2J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="GcU-U2-bV8"/>
+                            <constraint firstItem="XJ9-K4-EYv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="IR2-sN-5OH"/>
+                            <constraint firstItem="XIw-3n-jpD" firstAttribute="top" secondItem="ZSb-4f-mQa" secondAttribute="bottom" constant="8" id="N19-Ep-QX2"/>
+                            <constraint firstItem="pCx-Ds-h0m" firstAttribute="top" secondItem="Bbm-Go-iYs" secondAttribute="bottom" constant="8" id="OaW-YK-r47"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZSb-4f-mQa" secondAttribute="trailing" constant="123" id="QeO-57-xfa"/>
+                            <constraint firstItem="qJa-ab-V2J" firstAttribute="top" secondItem="XJ9-K4-EYv" secondAttribute="bottom" constant="8" id="Xbz-YN-84j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XIw-3n-jpD" secondAttribute="trailing" constant="128" id="b3e-iY-IBD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qJa-ab-V2J" secondAttribute="trailing" constant="131" id="bGR-dP-z37"/>
+                            <constraint firstItem="XIw-3n-jpD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="128" id="ftX-Yr-vQb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XIw-3n-jpD" secondAttribute="bottom" constant="210" id="jMW-TA-odI"/>
+                            <constraint firstItem="Bbm-Go-iYs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="khR-bB-8gE"/>
+                            <constraint firstItem="ZSb-4f-mQa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="ks4-vV-LIa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bbm-Go-iYs" secondAttribute="trailing" constant="140" id="sgV-Ul-UUi"/>
+                            <constraint firstItem="pCx-Ds-h0m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="139" id="thD-8b-dXB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XJ9-K4-EYv" secondAttribute="trailing" constant="131" id="xx4-Lq-JgJ"/>
+                            <constraint firstItem="ZSb-4f-mQa" firstAttribute="top" secondItem="pCx-Ds-h0m" secondAttribute="bottom" constant="64" id="zO0-R4-iH6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -288,6 +288,7 @@
                     <navigationItem key="navigationItem" id="KB0-ga-cLB">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="5LF-C5-hra">
                             <connections>
+                                <action selector="logoutQuestion:" destination="CWm-G9-cfj" id="BjU-Xb-PLI"/>
                                 <segue destination="BYZ-38-t0r" kind="show" id="k1t-Ia-ga3"/>
                             </connections>
                         </barButtonItem>
@@ -714,7 +715,6 @@
                                 <state key="normal" title="Publish"/>
                                 <connections>
                                     <action selector="publishToClassOnTap:" destination="4ci-Wp-I8k" eventType="touchUpInside" id="ljm-0a-7uv"/>
-                                    <segue destination="2Kx-oW-OaP" kind="show" identifier="segue" id="X5L-nd-pJa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Option A:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuS-7H-SJr">
@@ -811,8 +811,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="3b9-hT-MGJ"/>
         <segue reference="t7y-zy-dZC"/>
-        <segue reference="X5L-nd-pJa"/>
         <segue reference="crk-QA-ceo"/>
-        <segue reference="EEn-dN-lQH"/>
+        <segue reference="k1t-Ia-ga3"/>
     </inferredMetricsTieBreakers>
 </document>

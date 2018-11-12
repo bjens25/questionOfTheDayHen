@@ -28,5 +28,9 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    @IBAction func logoutQuestion(_ sender: UIBarButtonItem) {
+
+    }
+    
     
 }

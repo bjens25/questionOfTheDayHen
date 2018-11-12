@@ -21,10 +21,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        adminLogin.isHidden = true
-        studentLogin.isHidden = false
-        adminSignUp.isHidden = true
-        studentSignUp.isHidden = false
+//        adminLogin.isHidden = true
+//        studentLogin.isHidden = true
+//        adminSignUp.isHidden = true
+//        studentSignUp.isHidden = true
     }
 
 }

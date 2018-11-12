@@ -22,7 +22,7 @@ class AdminQuestionViewController: UIViewController {
     }
 
     @IBAction func publishToClassOnTap(_ sender: UIButton) {
-      
+            
         }
     
 
