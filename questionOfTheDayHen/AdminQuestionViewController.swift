@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class AdminQuestionViewController: UIViewController {
-
+    
     @IBOutlet weak var adminQuestion: UITextField!
     @IBOutlet weak var adminA: UITextField!
     @IBOutlet weak var adminB: UITextField!
@@ -26,6 +28,7 @@ class AdminQuestionViewController: UIViewController {
         }
     
 
+ 
     /*
     // MARK: - Navigation
 
