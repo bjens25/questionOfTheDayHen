@@ -44,8 +44,15 @@ class AdminQuestionViewController: UIViewController {
                 print("Document was successfully created and written.")
             }
         }
-
-        
+        db.collection("question").document("question").setData(["question" : adminQuestion.text])
+        {(error: Error?) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                print("something not right")
+            }else{
+                print("Document was successfully created and written.")
+            }
+        }
         }
     
 
