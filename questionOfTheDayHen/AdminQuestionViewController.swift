@@ -23,8 +23,29 @@ class AdminQuestionViewController: UIViewController {
 
     }
 
-    @IBAction func publishToClassOnTap(_ sender: UIButton) {
-            
+    @IBAction func publishToClassOnTap(_ sender: UIButton)
+    {
+        var answerA = adminA.text
+        var answerB = adminB.text
+        var answerC = adminC.text
+        var answerD = adminD.text
+        
+        let db = Firestore.firestore()
+        db.collection("answerChoices").document("answerChoices").setData([
+            "A": answerA,
+            "B": answerB,
+            "C": answerC,
+            "D": answerD
+        ]) {(error: Error?) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                print("something not right")
+            }else{
+                print("Document was successfully created and written.")
+            }
+        }
+
+        
         }
     
 

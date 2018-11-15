@@ -20,10 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         let db = Firestore.firestore()
-        db.collection("cities").document("LA").setData([
-            "name": "Los Angeles",
-            "state": "CA",
-            "country": "USA"
+        db.collection("answerChoices").document("answerChoices").setData([
+            "A": "",
+            "B": "",
+            "C": "",
+            "D": ""
         ]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
