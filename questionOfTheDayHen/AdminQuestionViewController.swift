@@ -31,7 +31,7 @@ class AdminQuestionViewController: UIViewController {
         var answerD = adminD.text
         
         let db = Firestore.firestore()
-        db.collection("answerChoices").document("answerChoices").setData([
+        db.collection("answerChoices").document("A").setData([
             "A": answerA,
             "B": answerB,
             "C": answerC,
