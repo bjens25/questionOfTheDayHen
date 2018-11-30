@@ -31,11 +31,7 @@ class AdminQuestionViewController: UIViewController {
         var answerD = adminD.text
         
         let db = Firestore.firestore()
-        db.collection("answerChoices").document("A").setData([
-            "A": answerA,
-            "B": answerB,
-            "C": answerC,
-            "D": answerD
+db.collection("answerChoices").document("A").setData(["A": answerA
         ]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
@@ -44,7 +40,32 @@ class AdminQuestionViewController: UIViewController {
                 print("Document was successfully created and written.")
             }
         }
-        db.collection("question").document("question").setData(["question" : adminQuestion.text])
+db.collection("answerChoices").document("B").setData(["B": answerB]) {(error: Error?) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                print("something not right")
+            }else{
+                print("Document was successfully created and written.")
+            }
+        }
+db.collection("answerChoices").document("C").setData(["C": answerC
+        ]) {(error: Error?) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                print("something not right")
+            }else{
+                print("Document was successfully created and written.")
+            }
+        }
+db.collection("answerChoices").document("D").setData(["D": answerD
+        ]) {(error: Error?) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                print("something not right")
+            }else{
+                print("Document was successfully created and written.")
+            }}
+db.collection("question").document("question").setData(["question" :adminQuestion.text])
         {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AdminClassesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -49,6 +50,7 @@ class AdminClassesViewController: UIViewController, UITableViewDataSource, UITab
             textField.placeholder = "Class Code"
         }
         present(alert, animated: true, completion: nil)
+        
     }
 
     /*
