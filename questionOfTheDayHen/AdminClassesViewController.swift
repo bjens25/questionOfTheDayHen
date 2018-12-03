@@ -39,15 +39,27 @@ class AdminClassesViewController: UIViewController, UITableViewDataSource, UITab
         let alert = UIAlertController(title: "Add Class?", message: "Fill in the class name.", preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) {(action) in
             let classCodeTextField = alert.textFields![0] as UITextField
+            classCodeTextField.placeholder = "Class Code"
+            let classNameTextField = alert.textFields![1] as UITextField
+            classNameTextField.placeholder = "Class Name"
+            let className = classNameTextField.text
             let classCode = classCodeTextField.text
-            self.classes.append(classCode!)
+            self.classes.append(className!)
             self.adminClassesTableView.reloadData()
+            let db = Firestore.firestore()
+            //db.collection("classCodes").document("class").setData([className!: classCode!])
+            db.collection("classCodes").addDocument(data: [className!: classCode!])
+            
+            
         }
         let cancelAction =  UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(OKAction)
         alert.addAction(cancelAction)
         alert.addTextField { (textField) in
             textField.placeholder = "Class Code"
+        }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Class Name"
         }
         present(alert, animated: true, completion: nil)
         
