@@ -57,7 +57,7 @@
                                 <rect key="frame" x="131" y="199" width="113" height="30"/>
                                 <state key="normal" title="Admin Sign Up"/>
                                 <connections>
-                                    <segue destination="vsT-Xb-p9S" kind="show" id="XDH-hH-Ubq"/>
+                                    <segue destination="vsT-Xb-p9S" kind="show" identifier="segue1" id="LAQ-oo-nz1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -565,7 +565,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signIN:" destination="vsT-Xb-p9S" eventType="touchUpInside" id="aEH-Yf-iBh"/>
+                                    <action selector="signIN:" destination="vsT-Xb-p9S" eventType="touchUpInside" id="9gA-iP-339"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="N30-DT-URh"/>
                                 </connections>
                             </button>
@@ -609,15 +609,15 @@
                         <viewLayoutGuide key="safeArea" id="YkP-Oh-P46"/>
                     </view>
                     <connections>
-                        <outlet property="confirmPasswordTextField" destination="i5l-3z-FNY" id="OHH-GM-gDj"/>
-                        <outlet property="emailTextField" destination="JTk-mN-6fM" id="0Qg-YH-Mam"/>
-                        <outlet property="passwordTextField" destination="8pb-ux-xjr" id="YZk-3T-BMc"/>
+                        <outlet property="confirmPasswordTextField" destination="i5l-3z-FNY" id="UI9-xF-fX9"/>
+                        <outlet property="emailTextField" destination="JTk-mN-6fM" id="7ZT-ia-oVv"/>
+                        <outlet property="passwordTextField" destination="8pb-ux-xjr" id="q6I-Gv-bMK"/>
                         <outlet property="signUpButtonOutlet" destination="t5r-60-xbS" id="2kf-fG-wou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E39-0O-VC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328.80000000000001" y="-2311.394302848576"/>
+            <point key="canvasLocation" x="329" y="-2293"/>
         </scene>
         <!--Admin Login View Controller-->
         <scene sceneID="gQP-tw-otE">
@@ -888,8 +888,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9kZ-KB-r9L"/>
-        <segue reference="GA0-8K-sxr"/>
+        <segue reference="LAQ-oo-nz1"/>
+        <segue reference="3b9-hT-MGJ"/>
+        <segue reference="t7y-zy-dZC"/>
         <segue reference="DI0-2D-n6u"/>
         <segue reference="N30-DT-URh"/>
     </inferredMetricsTieBreakers>
