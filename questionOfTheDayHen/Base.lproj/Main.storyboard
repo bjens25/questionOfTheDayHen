@@ -57,7 +57,7 @@
                                 <rect key="frame" x="131" y="199" width="113" height="30"/>
                                 <state key="normal" title="Admin Sign Up"/>
                                 <connections>
-                                    <segue destination="vsT-Xb-p9S" kind="show" identifier="segue1" id="LAQ-oo-nz1"/>
+                                    <segue destination="vsT-Xb-p9S" kind="show" identifier="" id="LAQ-oo-nz1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -332,7 +332,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0H-tU-Iz7">
-                                <rect key="frame" x="38" y="174" width="299" height="30"/>
+                                <rect key="frame" x="38" y="218" width="299" height="30"/>
                                 <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wdW-cC-Rbz"/>
@@ -346,7 +346,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-dJ-WHS">
-                                <rect key="frame" x="38" y="250" width="299" height="30"/>
+                                <rect key="frame" x="38" y="294" width="299" height="30"/>
                                 <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="SbS-kU-cKv"/>
@@ -360,7 +360,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-cM-vh9">
-                                <rect key="frame" x="38" y="288" width="299" height="30"/>
+                                <rect key="frame" x="38" y="332" width="299" height="30"/>
                                 <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NqJ-ab-75k"/>
@@ -374,7 +374,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8YL-FU-FFh">
-                                <rect key="frame" x="38" y="212" width="299" height="30"/>
+                                <rect key="frame" x="38" y="256" width="299" height="30"/>
                                 <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="axF-XE-gRK"/>
@@ -388,7 +388,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ng-K9-8yu">
-                                <rect key="frame" x="107" y="145" width="161" height="21"/>
+                                <rect key="frame" x="107" y="189" width="161" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="D6u-ND-cpj"/>
                                 </constraints>
@@ -397,7 +397,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3X-Gz-8LR">
-                                <rect key="frame" x="163" y="353" width="49" height="30"/>
+                                <rect key="frame" x="163" y="397" width="49" height="30"/>
                                 <color key="backgroundColor" red="0.1137958682" green="0.13478946380000001" blue="0.70966240280000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ikt-la-C6E"/>
@@ -406,7 +406,19 @@
                                 <state key="normal" title="Submit"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLo-tr-Kd2">
-                                <rect key="frame" x="0.0" y="324" width="375" height="21"/>
+                                <rect key="frame" x="0.0" y="368" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20l-D3-gGs">
+                                <rect key="frame" x="131" y="453" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View Responses"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct Answer Has Not Been Determined" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHS-Y6-cCh">
+                                <rect key="frame" x="26" y="491" width="323" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -440,6 +452,7 @@
                         <viewLayoutGuide key="safeArea" id="gLH-5A-Xcb"/>
                     </view>
                     <connections>
+                        <outlet property="adminCorrectAnswer" destination="tHS-Y6-cCh" id="a0z-LR-VoT"/>
                         <outlet property="answerLabel" destination="TLo-tr-Kd2" id="qrq-I2-weC"/>
                         <outlet property="onSubmitTapped" destination="L3X-Gz-8LR" id="Ew3-yw-5gv"/>
                         <outlet property="optionA" destination="W0H-tU-Iz7" id="7Q8-gh-YXc"/>
@@ -754,6 +767,7 @@
                                 <state key="normal" title="Publish"/>
                                 <connections>
                                     <action selector="publishToClassOnTap:" destination="4ci-Wp-I8k" eventType="touchUpInside" id="ljm-0a-7uv"/>
+                                    <segue destination="2Kx-oW-OaP" kind="show" identifier="segue" id="Xou-qg-UrT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Option A:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuS-7H-SJr">
@@ -888,9 +902,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LAQ-oo-nz1"/>
         <segue reference="3b9-hT-MGJ"/>
         <segue reference="t7y-zy-dZC"/>
+        <segue reference="Xou-qg-UrT"/>
         <segue reference="DI0-2D-n6u"/>
         <segue reference="N30-DT-URh"/>
     </inferredMetricsTieBreakers>

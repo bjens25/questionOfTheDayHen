@@ -20,9 +20,15 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     let db = Firestore.firestore()
     var answerAStore = String()
-        
+    @IBOutlet weak var adminCorrectAnswer: UILabel!
+    
+    var answersArray = [String]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        adminCorrectAnswer.text = "The Correct Answer Hasn't Been Determined."
         optionA.setTitle("Option A", for: .normal)
         optionB.setTitle("Option B", for: .normal)
         optionC.setTitle("Option C", for: .normal)
@@ -37,6 +43,11 @@ class QuestionViewController: UIViewController {
 
     @IBAction func onATapped(_ sender: UIButton) {
         answerLabel.text = "Answer: \(optionA.title(for: .normal)!)"
+        answersArray.append("A: \(optionA.title(for: .normal)!)")
+        if answersArray[0] == "A: \(optionA.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
+        }
         db.collection("answerChoices").document("A")
             .addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
@@ -52,14 +63,65 @@ class QuestionViewController: UIViewController {
     }
     @IBAction func onBTapped(_ sender: UIButton) {
         answerLabel.text = "Answer: \(optionB.title(for: .normal)!)"
+        answersArray.append("B: \(optionB.title(for: .normal)!)")
+        if answersArray[0] == "B: \(optionB.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "B: \(optionB.title(for: .normal)!) is the Correct Answer."
+        }
+        db.collection("answerChoices").document("B")
+            .addSnapshotListener { documentSnapshot, error in
+                guard let document = documentSnapshot else {
+                    print("Error fetching document: \(error!)")
+                    return
+                }
+                guard let data = document.data() else {
+                    print("Document data was empty.")
+                    return
+                }
+                print("Current data: \(data)")
+        }
     }
     
     @IBAction func onCTapped(_ sender: UIButton) {
         answerLabel.text = "Answer: \(optionC.title(for: .normal)!)"
+        answersArray.append("C: \(optionC.title(for: .normal)!)")
+        if answersArray[0] == "C: \(optionC.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "C: \(optionC.title(for: .normal)!) is the Correct Answer."
+        }
+        db.collection("answerChoices").document("C")
+            .addSnapshotListener { documentSnapshot, error in
+                guard let document = documentSnapshot else {
+                    print("Error fetching document: \(error!)")
+                    return
+                }
+                guard let data = document.data() else {
+                    print("Document data was empty.")
+                    return
+                }
+                print("Current data: \(data)")
+        }
     }
     
     @IBAction func onDTapped(_ sender: UIButton) {
         answerLabel.text = "Answer: \(optionD.title(for: .normal)!)"
+        answersArray.append("D: \(optionD.title(for: .normal)!)")
+        if answersArray[0] == "D: \(optionD.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "D: \(optionD.title(for: .normal)!) is the Correct Answer."
+        }
+        db.collection("answerChoices").document("D")
+            .addSnapshotListener { documentSnapshot, error in
+                guard let document = documentSnapshot else {
+                    print("Error fetching document: \(error!)")
+                    return
+                }
+                guard let data = document.data() else {
+                    print("Document data was empty.")
+                    return
+                }
+                print("Current data: \(data)")
+        }
     }
     @IBOutlet weak var onSubmitTapped: UIButton!
     
