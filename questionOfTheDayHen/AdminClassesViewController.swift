@@ -47,7 +47,7 @@ class AdminClassesViewController: UIViewController, UITableViewDataSource, UITab
             self.classes.append(className!)
             self.adminClassesTableView.reloadData()
             let db = Firestore.firestore()
-            //db.collection("classCodes").document("class").setData([className!: classCode!])
+            
             db.collection("classCodes").addDocument(data: [className!: classCode!])
             
             
