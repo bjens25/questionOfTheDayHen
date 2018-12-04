@@ -33,7 +33,6 @@ class QuestionViewController: UIViewController {
         optionB.setTitle("Option B", for: .normal)
         optionC.setTitle("Option C", for: .normal)
         optionD.setTitle("Option D", for: .normal)
-        // Do any additional setup after loading the view.
         readA()
         readB()
         readC()
@@ -42,12 +41,6 @@ class QuestionViewController: UIViewController {
     }
 
     @IBAction func onATapped(_ sender: UIButton) {
-        answerLabel.text = "Answer: \(optionA.title(for: .normal)!)"
-        answersArray.append("A: \(optionA.title(for: .normal)!)")
-        if answersArray[0] == "A: \(optionA.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
-        }
         db.collection("answerChoices").document("A")
             .addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
@@ -60,14 +53,14 @@ class QuestionViewController: UIViewController {
                 }
                 print("Current data: \(data)")
         }
+        answerLabel.text = "Answer: \(optionA.title(for: .normal)!)"
+        answersArray.append("A: \(optionA.title(for: .normal)!)")
+        if answersArray[0] == "A: \(optionA.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
+        }
     }
     @IBAction func onBTapped(_ sender: UIButton) {
-        answerLabel.text = "Answer: \(optionB.title(for: .normal)!)"
-        answersArray.append("B: \(optionB.title(for: .normal)!)")
-        if answersArray[0] == "B: \(optionB.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "B: \(optionB.title(for: .normal)!) is the Correct Answer."
-        }
         db.collection("answerChoices").document("B")
             .addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
@@ -80,15 +73,15 @@ class QuestionViewController: UIViewController {
                 }
                 print("Current data: \(data)")
         }
+        answerLabel.text = "Answer: \(optionB.title(for: .normal)!)"
+        answersArray.append("B: \(optionB.title(for: .normal)!)")
+        if answersArray[0] == "B: \(optionB.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "B: \(optionB.title(for: .normal)!) is the Correct Answer."
+        }
     }
     
     @IBAction func onCTapped(_ sender: UIButton) {
-        answerLabel.text = "Answer: \(optionC.title(for: .normal)!)"
-        answersArray.append("C: \(optionC.title(for: .normal)!)")
-        if answersArray[0] == "C: \(optionC.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "C: \(optionC.title(for: .normal)!) is the Correct Answer."
-        }
         db.collection("answerChoices").document("C")
             .addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
@@ -101,15 +94,15 @@ class QuestionViewController: UIViewController {
                 }
                 print("Current data: \(data)")
         }
+        answerLabel.text = "Answer: \(optionC.title(for: .normal)!)"
+        answersArray.append("C: \(optionC.title(for: .normal)!)")
+        if answersArray[0] == "C: \(optionC.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "C: \(optionC.title(for: .normal)!) is the Correct Answer."
+        }
     }
     
     @IBAction func onDTapped(_ sender: UIButton) {
-        answerLabel.text = "Answer: \(optionD.title(for: .normal)!)"
-        answersArray.append("D: \(optionD.title(for: .normal)!)")
-        if answersArray[0] == "D: \(optionD.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "D: \(optionD.title(for: .normal)!) is the Correct Answer."
-        }
         db.collection("answerChoices").document("D")
             .addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
@@ -121,6 +114,12 @@ class QuestionViewController: UIViewController {
                     return
                 }
                 print("Current data: \(data)")
+        }
+        answerLabel.text = "Answer: \(optionD.title(for: .normal)!)"
+        answersArray.append("D: \(optionD.title(for: .normal)!)")
+        if answersArray[0] == "D: \(optionD.title(for: .normal)!)"
+        {
+            adminCorrectAnswer.text = "D: \(optionD.title(for: .normal)!) is the Correct Answer."
         }
     }
     @IBOutlet weak var onSubmitTapped: UIButton!
@@ -197,5 +196,17 @@ func readA()
             
         }    }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "theSegue"
+        {
+            let nvc = segue.destination as! ResponsesViewController
+            nvc.answers = answersArray
+        }
+    }
+    
+    @IBAction func submit(_ sender: UIButton) {
+        print(answersArray)
+    }
+    
 }
