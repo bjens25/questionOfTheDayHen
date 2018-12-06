@@ -21,13 +21,16 @@ class QuestionViewController: UIViewController {
     let db = Firestore.firestore()
     var answerAStore = String()
     @IBOutlet weak var adminCorrectAnswer: UILabel!
+//        var answerDictionary : [String: String]
     
     var answersArray = [String]()
+    var emailArray = [String]() // needs to become the array from firebase database "Authentication"
+    var email : String
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        alert()
         adminCorrectAnswer.text = "The Correct Answer Hasn't Been Determined."
         optionA.setTitle("Option A", for: .normal)
         optionB.setTitle("Option B", for: .normal)
@@ -208,5 +211,13 @@ func readA()
     @IBAction func submit(_ sender: UIButton) {
         print(answersArray)
     }
+    
+    func alert()
+    {
+        let alert = UIAlertController(title: "We Need A Correct Answer", message: "Please select the option that is correct now.", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(OKAction)
+        self.present(alert, animated: true, completion: nil)    
+        }
     
 }
