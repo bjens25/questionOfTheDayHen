@@ -21,11 +21,11 @@ class QuestionViewController: UIViewController {
     let db = Firestore.firestore()
     var answerAStore = String()
     @IBOutlet weak var adminCorrectAnswer: UILabel!
-//        var answerDictionary : [String: String]
     
     var answersArray = [String]()
-    var emailArray = [String]() // needs to become the array from firebase database "Authentication"
-    var email : String
+    var emailArray = [String]() 
+    var email = String()
+    var studentResponsesDictionary = [String: String]()
     
     
     override func viewDidLoad() {
@@ -62,6 +62,8 @@ class QuestionViewController: UIViewController {
         {
             adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
         }
+        studentResponsesDictionary.updateValue(optionA.title(for: .normal)!, forKey: email)
+        print(studentResponsesDictionary)
     }
     @IBAction func onBTapped(_ sender: UIButton) {
         db.collection("answerChoices").document("B")

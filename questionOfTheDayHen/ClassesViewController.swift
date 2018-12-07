@@ -11,6 +11,7 @@ import UIKit
 class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var classes = [String]()
+    var email = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,5 +33,12 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "segue"
+        {
+            let nvc = segue.destination as! QuestionViewController
+            nvc.email = email
+        }
+    }
 }
