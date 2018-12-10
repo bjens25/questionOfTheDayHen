@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class AdminClassesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -42,15 +43,16 @@ class AdminClassesViewController: UIViewController, UITableViewDataSource, UITab
             classCodeTextField.placeholder = "Class Code"
             let classNameTextField = alert.textFields![1] as UITextField
             classNameTextField.placeholder = "Class Name"
-            let className = classNameTextField.text
             let classCode = classCodeTextField.text
-            self.classes.append(className!)
+            let classTitle = classNameTextField.text
+            let className = classNameTextField.text ?? "No Class Name" + "Class Code:" + classCode! ?? "No class code"
+            self.classes.append(className)
             self.adminClassesTableView.reloadData()
             let db = Firestore.firestore()
             
-            db.collection("classCodes").addDocument(data: [className!: classCode!])
+            db.collection("classCodes").addDocument(data: [className: classCode!])
             
-            
+            db.collection("classCode").document(classCode!).setData([classTitle!: Auth.auth().currentUser?.email])
         }
         let cancelAction =  UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(OKAction)
