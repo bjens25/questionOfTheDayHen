@@ -62,8 +62,6 @@ class QuestionViewController: UIViewController {
         {
             adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
         }
-        studentResponsesDictionary.updateValue(optionA.title(for: .normal)!, forKey: email)
-        print(studentResponsesDictionary)
     }
     @IBAction func onBTapped(_ sender: UIButton) {
         db.collection("answerChoices").document("B")

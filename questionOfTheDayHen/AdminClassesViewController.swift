@@ -35,6 +35,12 @@ class AdminClassesViewController: UIViewController, UITableViewDataSource, UITab
         alert()
     }
     
+    func correctAnswerWrite()
+    {
+        let db = Firestore.firestore()
+        db.collection("answerChoices").document("correctAnswer").setData(["answersChoices": "correctAnswer"])
+    }
+    
     func alert()
     {
         let alert = UIAlertController(title: "Add Class?", message: "Fill in the class name.", preferredStyle: .alert)

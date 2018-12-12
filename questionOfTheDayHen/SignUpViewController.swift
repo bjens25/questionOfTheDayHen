@@ -41,12 +41,5 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.identifier == "segue"
-        {
-            let nvc = segue.destination as! ClassesViewController
-            nvc.email = emailTextField.text!
-        }
-    }
+
 }
