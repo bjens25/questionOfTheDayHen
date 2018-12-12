@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 class AdminQuestionViewController: UIViewController {
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var adminQuestion: UITextField!
     @IBOutlet weak var adminA: UITextField!
     @IBOutlet weak var adminB: UITextField!
@@ -74,7 +75,24 @@ db.collection("question").document("question").setData(["question" :adminQuestio
                 print("Document was successfully created and written.")
             }
         }
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            db.collection("answerChoices").document("correctAnswer").setData(["A": answerA
+                ])
+        case 1:
+            db.collection("answerChoices").document("correctAnswer").setData(["B": answerB
+                ]);
+        case 2:
+                db.collection("answerChoices").document("correctAnswer").setData(["C": answerC]);
+        case 3:
+           db.collection("answerChoices").document("correctAnswer").setData(["D": answerD]) ;
+        default:
+            break
         }
+    }
+        
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -85,7 +103,7 @@ db.collection("question").document("question").setData(["question" :adminQuestio
         }
     }
     
-
+}
  
     /*
     // MARK: - Navigation
@@ -96,4 +114,4 @@ db.collection("question").document("question").setData(["question" :adminQuestio
     }
     */
 
-}
+
