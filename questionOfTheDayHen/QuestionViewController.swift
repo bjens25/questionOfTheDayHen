@@ -30,7 +30,7 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alert()
+//        alert()
         adminCorrectAnswer.text = "The Correct Answer Hasn't Been Determined."
         optionA.setTitle("Option A", for: .normal)
         optionB.setTitle("Option B", for: .normal)
@@ -56,12 +56,12 @@ class QuestionViewController: UIViewController {
                 }
                 print("Current data: \(data)")
         }
-        answerLabel.text = "Answer: \(optionA.title(for: .normal)!)"
-        answersArray.append("A: \(optionA.title(for: .normal)!)")
-        if answersArray[0] == "A: \(optionA.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
-        }
+        answerLabel.text = "\(optionA.title(for: .normal)!)"
+//        answersArray.append("A: \(optionA.title(for: .normal)!)")
+//        if answersArray[0] == "A: \(optionA.title(for: .normal)!)"
+//        {
+//            adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
+//        }
     }
     @IBAction func onBTapped(_ sender: UIButton) {
         db.collection("answerChoices").document("B")
@@ -77,11 +77,11 @@ class QuestionViewController: UIViewController {
                 print("Current data: \(data)")
         }
         answerLabel.text = "Answer: \(optionB.title(for: .normal)!)"
-        answersArray.append("B: \(optionB.title(for: .normal)!)")
-        if answersArray[0] == "B: \(optionB.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "B: \(optionB.title(for: .normal)!) is the Correct Answer."
-        }
+        answerLabel.text = "\(optionB.title(for: .normal)!)"
+//        if answersArray[0] == "B: \(optionB.title(for: .normal)!)"
+//        {
+//            adminCorrectAnswer.text = "B: \(optionB.title(for: .normal)!) is the Correct Answer."
+//        }
     }
     
     @IBAction func onCTapped(_ sender: UIButton) {
@@ -98,11 +98,11 @@ class QuestionViewController: UIViewController {
                 print("Current data: \(data)")
         }
         answerLabel.text = "Answer: \(optionC.title(for: .normal)!)"
-        answersArray.append("C: \(optionC.title(for: .normal)!)")
-        if answersArray[0] == "C: \(optionC.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "C: \(optionC.title(for: .normal)!) is the Correct Answer."
-        }
+        answerLabel.text = "\(optionC.title(for: .normal)!)"
+//        if answersArray[0] == "C: \(optionC.title(for: .normal)!)"
+//        {
+//            adminCorrectAnswer.text = "C: \(optionC.title(for: .normal)!) is the Correct Answer."
+//        }
     }
     
     @IBAction func onDTapped(_ sender: UIButton) {
@@ -119,11 +119,11 @@ class QuestionViewController: UIViewController {
                 print("Current data: \(data)")
         }
         answerLabel.text = "Answer: \(optionD.title(for: .normal)!)"
-        answersArray.append("D: \(optionD.title(for: .normal)!)")
-        if answersArray[0] == "D: \(optionD.title(for: .normal)!)"
-        {
-            adminCorrectAnswer.text = "D: \(optionD.title(for: .normal)!) is the Correct Answer."
-        }
+        answerLabel.text = "\(optionD.title(for: .normal)!)"
+//        if answersArray[0] == "D: \(optionD.title(for: .normal)!)"
+//        {
+//            adminCorrectAnswer.text = "D: \(optionD.title(for: .normal)!) is the Correct Answer."
+//        }
     }
     @IBOutlet weak var onSubmitTapped: UIButton!
     
@@ -208,16 +208,22 @@ func readA()
         }
     }
     
-    @IBAction func submit(_ sender: UIButton) {
+    @IBAction func submitAnswer(_ sender: Any) {
+        answersArray.append(answerLabel.text!)
         print(answersArray)
     }
     
-    func alert()
-    {
-        let alert = UIAlertController(title: "We Need A Correct Answer", message: "Please select the option that is correct now.", preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(OKAction)
-        self.present(alert, animated: true, completion: nil)    
-        }
+    
+//    @IBAction func submit(_ sender: UIButton) {
+//        print(answersArray)
+//    }
+//
+//    func alert()
+//    {
+//        let alert = UIAlertController(title: "We Need A Correct Answer", message: "Please select the option that is correct now.", preferredStyle: .alert)
+//        let OKAction = UIAlertAction(title: "OK", style: .default)
+//        alert.addAction(OKAction)
+//        self.present(alert, animated: true, completion: nil)
+//        }
     
 }

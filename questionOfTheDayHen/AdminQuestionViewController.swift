@@ -91,8 +91,6 @@ db.collection("question").document("question").setData(["question" :adminQuestio
             break
         }
     }
-        
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
