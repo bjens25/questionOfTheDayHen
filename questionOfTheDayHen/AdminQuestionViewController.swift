@@ -91,13 +91,21 @@ db.collection("question").document("question").setData(["question" :adminQuestio
             break
         }
     }
+    @IBAction func updateAnswers(_ sender: UIButton) {
+        segmentedControl.setTitle("\(adminA.text!)", forSegmentAt: 0)
+        segmentedControl.setTitle("\(adminB.text!)", forSegmentAt: 1)
+        segmentedControl.setTitle("\(adminC.text!)", forSegmentAt: 2)
+        segmentedControl.setTitle("\(adminD.text!)", forSegmentAt: 3)
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        var correctAnswer = "\(segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex))"
         if segue.identifier == "segue"
         {
             let nvc = segue.destination as! QuestionViewController
-            nvc.answersArray = []
+            nvc.answersArray = ["\(correctAnswer)"]
         }
     }
     

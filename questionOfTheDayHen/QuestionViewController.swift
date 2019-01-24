@@ -20,7 +20,7 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     let db = Firestore.firestore()
     var answerAStore = String()
-    @IBOutlet weak var adminCorrectAnswer: UILabel!
+
     
     var answersArray = [String]()
     var emailArray = [String]() 
@@ -31,7 +31,6 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        alert()
-        adminCorrectAnswer.text = "The Correct Answer Hasn't Been Determined."
         optionA.setTitle("Option A", for: .normal)
         optionB.setTitle("Option B", for: .normal)
         optionC.setTitle("Option C", for: .normal)
