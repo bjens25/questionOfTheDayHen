@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             "A": "",
             "B": "",
             "C": "",
-            "D": ""
+            "D": "",
+            "correctAnswer": ""
         ]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")

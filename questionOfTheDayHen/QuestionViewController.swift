@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class QuestionViewController: UIViewController {
     
@@ -19,18 +20,14 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
     let db = Firestore.firestore()
-    var answerAStore = String()
-
     
+    var theCorrectAnswer = ""
     var answersArray = [String]()
     var emailArray = [String]() 
     var email = String()
-    var studentResponsesDictionary = [String: String]()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        alert()
         optionA.setTitle("Option A", for: .normal)
         optionB.setTitle("Option B", for: .normal)
         optionC.setTitle("Option C", for: .normal)
@@ -40,6 +37,8 @@ class QuestionViewController: UIViewController {
         readC()
         readD()
         readQuestion()
+        readCorrectAnswer()
+//        answersArray.append(theCorrectAnswer)
     }
 
     @IBAction func onATapped(_ sender: UIButton) {
@@ -124,7 +123,7 @@ class QuestionViewController: UIViewController {
 //            adminCorrectAnswer.text = "D: \(optionD.title(for: .normal)!) is the Correct Answer."
 //        }
     }
-    @IBOutlet weak var onSubmitTapped: UIButton!
+
     
 func readA()
 {
@@ -141,6 +140,7 @@ func readA()
         
     }    }
 
+    
     func readB()
     {
         let documentreference = db.collection("answerChoices").document("B")
@@ -169,20 +169,7 @@ func readA()
             }
             
         }    }
-    func readD()
-    {
-        let documentreference = db.collection("answerChoices").document("D")
-        
-        documentreference.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let answerD = document.get("D")
-                print("Document data: \(answerD)")
-                self.optionD.setTitle(answerD as! String, for: .normal)
-            } else {
-                print("Document does not exist")
-            }
-            
-        }    }
+
     func readQuestion()
     {
         let documentreference = db.collection("question").document("question")
@@ -197,6 +184,36 @@ func readA()
             }
             
         }    }
+    func readD()
+    {
+        let documentreference = db.collection("answerChoices").document("D")
+        
+        documentreference.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let answerD = document.get("D")
+                print("Document data: \(answerD)")
+                self.optionD.setTitle(answerD as! String, for: .normal)
+            } else {
+                print("Document does not exist")
+            }
+            
+        }    }
+    func readCorrectAnswer()
+    {
+        let documentReference = db.collection("correctAnswer").document("correctAnswer")
+
+        documentReference.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let correctAnswer = document.get("correctAnswer")
+                print("Document Data: \(correctAnswer)")
+                self.answersArray.append(correctAnswer as! String)
+            } else {
+                print("Document does not exist")
+            }
+
+    }
+    
+}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
@@ -213,9 +230,7 @@ func readA()
     }
     
     
-//    @IBAction func submit(_ sender: UIButton) {
-//        print(answersArray)
-//    }
+
 //
 //    func alert()
 //    {

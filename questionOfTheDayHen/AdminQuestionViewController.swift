@@ -12,7 +12,8 @@ import FirebaseFirestore
 
 class AdminQuestionViewController: UIViewController {
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+
+    @IBOutlet weak var adminCorrect: UITextField!
     @IBOutlet weak var adminQuestion: UITextField!
     @IBOutlet weak var adminA: UITextField!
     @IBOutlet weak var adminB: UITextField!
@@ -30,6 +31,7 @@ class AdminQuestionViewController: UIViewController {
         var answerB = adminB.text
         var answerC = adminC.text
         var answerD = adminD.text
+        var correct = adminCorrect.text
         
         let db = Firestore.firestore()
 db.collection("answerChoices").document("A").setData(["A": answerA
@@ -41,7 +43,8 @@ db.collection("answerChoices").document("A").setData(["A": answerA
                 print("Document was successfully created and written.")
             }
         }
-db.collection("answerChoices").document("B").setData(["B": answerB]) {(error: Error?) in
+db.collection("answerChoices").document("B").setData(["B": answerB
+    ]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
                 print("something not right")
@@ -75,39 +78,107 @@ db.collection("question").document("question").setData(["question" :adminQuestio
                 print("Document was successfully created and written.")
             }
         }
-        switch segmentedControl.selectedSegmentIndex
-        {
-        case 0:
-            db.collection("answerChoices").document("correctAnswer").setData(["A": answerA
-                ])
-        case 1:
-            db.collection("answerChoices").document("correctAnswer").setData(["B": answerB
-                ]);
-        case 2:
-                db.collection("answerChoices").document("correctAnswer").setData(["C": answerC]);
-        case 3:
-           db.collection("answerChoices").document("correctAnswer").setData(["D": answerD]) ;
-        default:
-            break
+        if correct == answerA {
+            db.collection("correctAnswer").document("correctAnswer").setData(["correctAnswer" : correct
+                ]) {(error: Error?) in
+                if let error = error {
+                    print("\(error.localizedDescription)")
+                    print("something not right")
+                }else{
+                    print("Document was successfully created and written.")
+                }
         }
+        }
+        if correct == answerB {
+            db.collection("correctAnswer").document("correctAnswer").setData(["correctAnswer" : correct
+                ]) {(error: Error?) in
+                    if let error = error {
+                        print("\(error.localizedDescription)")
+                        print("something not right")
+                    }else{
+                        print("Document was successfully created and written.")
+                    }
+                }
+        }
+        if correct == answerC {
+            db.collection("correctAnswer").document("correctAnswer").setData(["correctAnswer" : correct
+                ]) {(error: Error?) in
+                    if let error = error {
+                        print("\(error.localizedDescription)")
+                        print("something not right")
+                    }else{
+                        print("Document was successfully created and written.")
+                    }
+                }
+            }
+        if correct == answerD {
+                db.collection("correctAnswer").document("correctAnswer").setData(["correctAnswer" : correct
+                    ]) {(error: Error?) in
+                        if let error = error {
+                            print("\(error.localizedDescription)")
+                            print("something not right")
+                        }else{
+                            print("Document was successfully created and written.")
+                        }
+                    }
+            }
+//        switch segmentedControl.selectedSegmentIndex
+//        {
+//        case 0:
+//            db.collection("answerChoices").document("correctAnswer").setData(["A": answerA
+//            ]) {(error: Error?) in
+//                if let error = error {
+//                    print("\(error.localizedDescription)")
+//                    print("something not right")
+//                }else{
+//                    print("Document was successfully created and written.")
+//                }}
+//        case 1:
+//            db.collection("answerChoices").document("correctAnswer").setData(["B": answerB
+//            ]) {(error: Error?) in
+//                if let error = error {
+//                    print("\(error.localizedDescription)")
+//                    print("something not right")
+//                }else{
+//                    print("Document was successfully created and written.")
+//                }}
+//        case 2:
+//            db.collection("answerChoices").document("correctAnswer").setData(["C": answerC]) {(error: Error?) in
+//                if let error = error {
+//                    print("\(error.localizedDescription)")
+//                    print("something not right")
+//                }else{
+//                    print("Document was successfully created and written.")
+//                }}
+//        case 3:
+//            db.collection("answerChoices").document("correctAnswer").setData(["D": answerD]){(error: Error?) in
+//                if let error = error {
+//                    print("\(error.localizedDescription)")
+//                    print("something not right")
+//                }else{
+//                    print("Document was successfully created and written.")
+//                }}
+//        default:
+//            break
+//        }
     }
-    @IBAction func updateAnswers(_ sender: UIButton) {
-        segmentedControl.setTitle("\(adminA.text!)", forSegmentAt: 0)
-        segmentedControl.setTitle("\(adminB.text!)", forSegmentAt: 1)
-        segmentedControl.setTitle("\(adminC.text!)", forSegmentAt: 2)
-        segmentedControl.setTitle("\(adminD.text!)", forSegmentAt: 3)
-        
-    }
+//    @IBAction func updateAnswers(_ sender: UIButton) {
+//        segmentedControl.setTitle("\(adminA.text!)", forSegmentAt: 0)
+//        segmentedControl.setTitle("\(adminB.text!)", forSegmentAt: 1)
+//        segmentedControl.setTitle("\(adminC.text!)", forSegmentAt: 2)
+//        segmentedControl.setTitle("\(adminD.text!)", forSegmentAt: 3)
+//
+//    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        var correctAnswer = "\(segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex))"
-        if segue.identifier == "segue"
-        {
-            let nvc = segue.destination as! QuestionViewController
-            nvc.answersArray = ["\(correctAnswer)"]
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+////        var correctAnswer = "\(segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)!)"
+//        if segue.identifier == "segue"
+//        {
+//            let nvc = segue.destination as! QuestionViewController
+////            nvc.answersArray = ["\(correctAnswer)"]
+//        }
+//    }
     
 }
  
@@ -119,5 +190,6 @@ db.collection("question").document("question").setData(["question" :adminQuestio
         // Pass the selected object to the new view controller.
     }
     */
+
 
 

@@ -8,10 +8,12 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 import FirebaseAuth
 
 class AdminClassesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    let db = Firestore.firestore()
     @IBOutlet weak var adminClassesTableView: UITableView!
     var classes = [String]()
     
