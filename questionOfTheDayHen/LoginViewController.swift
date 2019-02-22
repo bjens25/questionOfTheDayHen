@@ -15,19 +15,48 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var logInButtonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+logInButtonOutlet.isEnabled = false
 }
+    func correctInfo()
+    {
+        var email = emailTextField.text
+        var password = passwordTextField.text
+        if (email == "") && password == ""
+        {
+            logInButtonOutlet.isEnabled = false
+        }
+        else if email != "" && password == ""
+        {
+            logInButtonOutlet.isEnabled = false
+        }
+        else if email == "" && password != ""
+        {
+            logInButtonOutlet.isEnabled = false
+        }
+        else if email != "" && password != ""
+        {
+            logInButtonOutlet.isEnabled = true
+        }
+    }
     
+    @IBAction func emailEdit(_ sender: UITextField) {
+        correctInfo()
+    }
+    
+    @IBAction func passwordEdit(_ sender: UITextField) {
+        correctInfo()
+    }
     @IBAction func logInButton(_ sender: UIButton)
     {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             guard (authResult?.user) != nil else {return}
             
             self.dismiss(animated: true, completion: nil)
-            self.performSegue(withIdentifier: "segue", sender: UIButton())
+//            self.performSegue(withIdentifier: "segue", sender: UIButton())
         }
     }
     

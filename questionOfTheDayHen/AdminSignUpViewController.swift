@@ -30,13 +30,14 @@ class AdminSignUpViewController: UIViewController {
         else
         {
             
-        }
+        
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
         {
             (authResult, error) in
             guard (authResult?.user) != nil else {return}
             
             self.dismiss(animated: true, completion: nil)
+        }
         }
     }
     

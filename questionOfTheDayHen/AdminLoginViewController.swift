@@ -14,11 +14,41 @@ class AdminLoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var logInButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
+    func correctInfo()
+    {
+        var email = emailTextField.text
+        var password = passwordTextField.text
+        if (email == "") && password == ""
+        {
+            logInButtonOutlet.isEnabled = false
+        }
+        else if email != "" && password == ""
+        {
+            logInButtonOutlet.isEnabled = false
+        }
+        else if email == "" && password != ""
+        {
+            logInButtonOutlet.isEnabled = false
+        }
+        else if email != "" && password != ""
+        {
+            logInButtonOutlet.isEnabled = true
+        }
+    }
+    
+    @IBAction func passwordCorrectInfo(_ sender: UITextField) {
+        correctInfo()
+    }
+    @IBAction func emailCorrectInfo(_ sender: UITextField) {
+        correctInfo()
+    }
+    
     
     @IBAction func logInButton(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
