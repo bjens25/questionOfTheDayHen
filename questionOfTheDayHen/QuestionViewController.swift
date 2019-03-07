@@ -21,10 +21,11 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     let db = Firestore.firestore()
     
-    var theCorrectAnswer = ""
+    var theCorrectAnswer: String!
     var answersArray = [String]()
     var emailArray = [String]() 
     var email = String()
+    var responseNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class QuestionViewController: UIViewController {
         readD()
         readQuestion()
         readCorrectAnswer()
+        readExistingAnswersArray()
 //        answersArray.append(theCorrectAnswer)
     }
 
@@ -207,6 +209,7 @@ func readA()
                 let correctAnswer = document.get("correctAnswer")
                 print("Document Data: \(correctAnswer)")
                 self.answersArray.append(correctAnswer as! String)
+                self.theCorrectAnswer = correctAnswer as! String
             } else {
                 print("Document does not exist")
             }
@@ -226,10 +229,52 @@ func readA()
     
     @IBAction func submitAnswer(_ sender: Any) {
         answersArray.append(answerLabel.text!)
+        var myAnswer = answerLabel.text
         print(answersArray)
+        appendToFirebase()
+        responseNumber += 1
+        if myAnswer == theCorrectAnswer{
+            print("Correct!")
+        }
+        else{
+            print("Incorrect")
+        }
+        
     }
-    
-    
+
+    func appendToFirebase(){
+        for value in answersArray{
+            let db = Firestore.firestore()
+            db.collection("responses").document("response\(responseNumber)").setData([
+                "response" : value
+                ]) {(error: Error?) in
+                if let error = error {
+                    print("\(error.localizedDescription)")
+                    print("something not right")
+                }else{
+                    print("Document was successfully created and written.")
+                }
+            }
+        }
+    }
+
+    func readExistingAnswersArray(){
+        for int in 0 ... 100{
+            //how can this be worked around that it can only take a certain number of responses
+            let documentreference = db.collection("responses").document("response\(int)")
+            
+            documentreference.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let response = document.get("response")
+                    print("Document data: \(response)")
+                    self.answersArray.append(response as! String)
+                } else {
+                    print("Document does not exist")
+                }
+                
+            }
+        }
+    }
 
 //
 //    func alert()

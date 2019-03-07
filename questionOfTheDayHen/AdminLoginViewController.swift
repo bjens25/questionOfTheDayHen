@@ -49,11 +49,10 @@ class AdminLoginViewController: UIViewController {
         correctInfo()
     }
     
-    
     @IBAction func logInButton(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             guard (authResult?.user) != nil else {return}
-            
+
             self.dismiss(animated: true, completion: nil)
 //            self.performSegue(withIdentifier: "segue", sender: UIButton())
         }

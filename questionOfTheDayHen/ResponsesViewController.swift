@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class ResponsesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var tableView: UITableView!
     
+    let db = Firestore.firestore()
+
     var isCorrect: Bool!
     var answers = [String]()
     var correctAnswers = [String]()
@@ -34,6 +38,7 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(answers)
         for answer in answers {
             if answers[0] == answer
             {
@@ -46,9 +51,11 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
                 incorrectAnswers.append(answer)
             }
             
+
         }
     }
     
+ 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if tableView == self.tableView
@@ -80,6 +87,23 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
             return cell2!
         }
         return UITableViewCell()
+    }
+    
+    func readExistingAnswersArray(){
+        for int in 0 ... 100{
+        let documentreference = db.collection("responses").document("response\(int)")
+        
+        documentreference.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let response = document.get("response")
+                print("Document data: \(response)")
+                self.answers.append(response as! String)
+            } else {
+                print("Document does not exist")
+            }
+            
+        }
+        }
     }
     
 

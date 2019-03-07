@@ -30,8 +30,6 @@ class SignUpViewController: UIViewController {
         }
         else
         {
-            
-        
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
         {
             (authResult, error) in

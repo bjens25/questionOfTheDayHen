@@ -30,12 +30,20 @@ class AdminSignUpViewController: UIViewController {
         else
         {
             
-        
+//            Auth.auth().createUser(withEmail: (emailTextField.text ?? ""), password: (passwordTextField.text ?? "")) { (result, error) in
+//                if let _eror = error {
+//                    //something bad happning
+//                    print(_eror.localizedDescription )
+//                }else{
+//                    //user registered successfully
+//                    print(result)
+//                }
+//            }
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
         {
             (authResult, error) in
             guard (authResult?.user) != nil else {return}
-            
+
             self.dismiss(animated: true, completion: nil)
         }
         }
