@@ -233,6 +233,7 @@ func readA()
         print(answersArray)
         appendToFirebase()
         responseNumber += 1
+        //is there an issue with redundancy?
         if myAnswer == theCorrectAnswer{
             print("Correct!")
         }
@@ -260,7 +261,8 @@ func readA()
 
     func readExistingAnswersArray(){
         for int in 0 ... 100{
-            //how can this be worked around that it can only take a certain number of responses
+            //how can this be worked around? (that it can only take a certain number of responses)
+            //also now will have to discard documents when new question presented?
             let documentreference = db.collection("responses").document("response\(int)")
             
             documentreference.getDocument { (document, error) in

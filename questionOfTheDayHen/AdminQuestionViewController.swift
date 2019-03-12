@@ -170,15 +170,23 @@ db.collection("question").document("question").setData(["question" :adminQuestio
 //
 //    }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-////        var correctAnswer = "\(segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)!)"
-//        if segue.identifier == "segue"
-//        {
-//            let nvc = segue.destination as! QuestionViewController
-////            nvc.answersArray = ["\(correctAnswer)"]
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+//        var correctAnswer = "\(segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)!)"
+        if segue.identifier == "segue"
+        {
+            let nvc = segue.destination as! QuestionViewController
+            nvc.db.collection("responses").delete() { err in
+                if let err = err {
+                    print("Error removing document: \(err)")
+                } else {
+                    print("Document successfully removed!")
+                }
+            
+            }
+//            nvc.answersArray = ["\(correctAnswer)"]
+        }
+    }
     
 }
  
