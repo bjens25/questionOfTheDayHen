@@ -176,7 +176,8 @@ db.collection("question").document("question").setData(["question" :adminQuestio
         if segue.identifier == "segue"
         {
             let nvc = segue.destination as! QuestionViewController
-            nvc.db.collection("responses").delete() { err in
+            for int in 0...100{
+            nvc.db.collection("responses").document("response\(int)").delete() { err in
                 if let err = err {
                     print("Error removing document: \(err)")
                 } else {
@@ -184,7 +185,7 @@ db.collection("question").document("question").setData(["question" :adminQuestio
                 }
             
             }
-//            nvc.answersArray = ["\(correctAnswer)"]
+            }     //            nvc.answersArray = ["\(correctAnswer)"]
         }
     }
     
