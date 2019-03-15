@@ -232,7 +232,7 @@ func readA()
         var myAnswer = answerLabel.text
         print(answersArray)
         appendToFirebase()
-        responseNumber += 1
+        responseNumber = answersArray.count
         //is there an issue with redundancy?
         if myAnswer == theCorrectAnswer{
             print("Correct!")
@@ -256,6 +256,7 @@ func readA()
                     print("Document was successfully created and written.")
                 }
             }
+        
         }
     }
 
