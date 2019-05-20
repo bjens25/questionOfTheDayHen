@@ -18,9 +18,11 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
 
     var isCorrect: Bool!
     var answers = [String]()
-    var names = [String]()
     var correctAnswers = [String]()
     var incorrectAnswers = [String]()
+    var names = [String]()
+    var correctNames = [String]()
+    var incorrectNames = [String]()
     var name = String()
     
     override func viewDidLoad() {
@@ -32,14 +34,17 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func gradeAnswers()
     {
-        for answer in answers {
-            if answers[0] == answer {
+        for int in 0...answers.count - 1 {
+            if answers[0] == answers[int]{
                 isCorrect = true
-                correctAnswers.append(answer)
+                correctAnswers.append(answers[int])
+                correctNames.append(names[int])
             }
             else {
                 isCorrect = false
-                incorrectAnswers.append(answer)
+                incorrectAnswers.append(answers[int])
+                incorrectNames.append(names[int])
+                
             }
         }
     }
@@ -58,15 +63,17 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
         if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
             let theAnswer = correctAnswers[indexPath.row]
+            let theName = correctNames[indexPath.row]
             cell?.textLabel?.text = theAnswer
-            cell?.detailTextLabel?.text = "\(name)"
+            cell?.detailTextLabel?.text = theName
             return cell!
         }
         else if tableView == self.tableView2 {
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "cell2")
             let theAnswer = incorrectAnswers[indexPath.row]
+            let theName = incorrectNames[indexPath.row]
             cell2?.textLabel?.text = theAnswer
-            cell2?.detailTextLabel?.text = "\(name)"
+            cell2?.detailTextLabel?.text = theName
             return cell2!
         }
         return UITableViewCell()
@@ -84,23 +91,22 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
                 print("Document does not exist")
             }
             }
-        }
-    }
-    func readExistingNamesArray(){
-        for int in 0 ... 100{
-            let documentreference = db.collection("names").document("name\(int)")
+            let documentreference2 = db.collection("names").document("name\(int)")
             
-            documentreference.getDocument { (document, error) in
+            documentreference2.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let aName = document.get("name")
                     print("Document data: \(aName)")
-                    self.answers.append(aName as! String)
+                    self.names.append(aName as! String)
                 } else {
                     print("Document does not exist")
                 }
                 
             }
         }
+    }
+    func readExistingNamesArray(){
+        
     }
     
 
