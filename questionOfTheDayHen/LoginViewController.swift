@@ -24,17 +24,17 @@ logInButtonOutlet.isEnabled = false
     func correctInfo()
     {
         let email = emailTextField.text
-        let password = passwordTextField.text
-        if (email == "") && password == "" {
+        
+        if (email == "")  {
             logInButtonOutlet.isEnabled = false
         }
-        if email != "" && password == "" {
+        if email != "" {
             logInButtonOutlet.isEnabled = false
         }
-        if email == "" && password != "" {
+        if email == "" {
             logInButtonOutlet.isEnabled = false
         }
-        if email != "" && password != "" {
+        if email != ""  {
             logInButtonOutlet.isEnabled = true
         }
     }
@@ -48,7 +48,7 @@ logInButtonOutlet.isEnabled = false
     }
     @IBAction func logInButton(_ sender: UIButton)
     {
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: "") { (authResult, error) in
             guard (authResult?.user) != nil
             else {
                 return

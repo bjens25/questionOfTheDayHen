@@ -203,7 +203,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmK-6e-Egy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmK-6e-Egy">
                                 <rect key="frame" x="56" y="248" width="263" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="peC-9A-9FG"/>
@@ -213,18 +213,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="emailEdit:" destination="ArT-N4-trP" eventType="editingChanged" id="Txh-GO-QWH"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rm-U7-Xne">
-                                <rect key="frame" x="56" y="320" width="263" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="mrh-UV-e3l"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="passwordEdit:" destination="ArT-N4-trP" eventType="editingChanged" id="S2y-Uz-GHI"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-zX-B1R" customClass="segue">
@@ -238,23 +226,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="3rm-U7-Xne" firstAttribute="top" secondItem="cmK-6e-Egy" secondAttribute="bottom" constant="42" id="0Ho-BR-gy3"/>
                             <constraint firstItem="TpS-eo-OU1" firstAttribute="trailing" secondItem="cmK-6e-Egy" secondAttribute="trailing" constant="56" id="8OD-fW-z2d"/>
                             <constraint firstItem="cmK-6e-Egy" firstAttribute="leading" secondItem="TpS-eo-OU1" secondAttribute="leading" constant="56" id="DGb-er-lrj"/>
-                            <constraint firstItem="TpS-eo-OU1" firstAttribute="trailing" secondItem="3rm-U7-Xne" secondAttribute="trailing" constant="56" id="Rin-fO-Eso"/>
                             <constraint firstItem="TpS-eo-OU1" firstAttribute="bottom" secondItem="y0a-zX-B1R" secondAttribute="bottom" constant="239" id="YBl-hh-uPs"/>
-                            <constraint firstItem="3rm-U7-Xne" firstAttribute="leading" secondItem="TpS-eo-OU1" secondAttribute="leading" constant="56" id="bKy-zy-S8A"/>
                             <constraint firstItem="TpS-eo-OU1" firstAttribute="trailing" secondItem="y0a-zX-B1R" secondAttribute="trailing" constant="169" id="eeo-R0-92h"/>
                             <constraint firstItem="cmK-6e-Egy" firstAttribute="top" secondItem="TpS-eo-OU1" secondAttribute="top" constant="228" id="tWa-U5-apZ"/>
                             <constraint firstItem="y0a-zX-B1R" firstAttribute="leading" secondItem="TpS-eo-OU1" secondAttribute="leading" constant="168" id="v46-6N-B71"/>
-                            <constraint firstItem="y0a-zX-B1R" firstAttribute="top" secondItem="3rm-U7-Xne" secondAttribute="bottom" constant="48" id="xcr-VL-mHF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TpS-eo-OU1"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="cmK-6e-Egy" id="zfH-7T-wwp"/>
                         <outlet property="logInButtonOutlet" destination="y0a-zX-B1R" id="Ww5-RP-DyL"/>
-                        <outlet property="passwordTextField" destination="3rm-U7-Xne" id="dX3-1P-Yki"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVN-mh-tMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1076,10 +1059,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VdO-tL-1RW"/>
         <segue reference="w3N-4e-8mg"/>
         <segue reference="4Un-98-dtv"/>
-        <segue reference="DI0-2D-n6u"/>
+        <segue reference="dnc-Lo-Oms"/>
         <segue reference="gba-hr-9r3"/>
     </inferredMetricsTieBreakers>
 </document>
