@@ -21,8 +21,7 @@ class classCodeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "segue"
-        {
+        if segue.identifier == "segue" {
             let nvc = segue.destination as! ClassesViewController
             nvc.classes.append(classCodeTextField.text!)
         }

@@ -18,82 +18,64 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
 
     var isCorrect: Bool!
     var answers = [String]()
+    var names = [String]()
     var correctAnswers = [String]()
     var incorrectAnswers = [String]()
-//    var defaults = UserDefaults.standard
-//    var answer = String()
-//
-//        {
-//        didSet
-//        {
-//            self.defaults.set(answers, forKey: answer)
-//        }
-//    }
-//    override func viewWillAppear(_ animated: Bool) {
-//        if let saveData = defaults.object(forKey: answer) as? [String]
-//        {
-//            answers = saveData
-//        }
-//    }
+    var name = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(answers)
+        gradeAnswers()
+
+    }
+    
+    func gradeAnswers()
+    {
         for answer in answers {
-            if answers[0] == answer
-            {
+            if answers[0] == answer {
                 isCorrect = true
                 correctAnswers.append(answer)
             }
-            else
-            {
+            else {
                 isCorrect = false
                 incorrectAnswers.append(answer)
             }
-            
-
         }
     }
-    
- 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if tableView == self.tableView
-        {
+        if tableView == self.tableView {
             return correctAnswers.count
         }
-        else if tableView == self.tableView2
-        {
+        else if tableView == self.tableView2 {
             return incorrectAnswers.count
         }
         return Int()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if tableView == self.tableView
-        {
+        if tableView == self.tableView {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
             let theAnswer = correctAnswers[indexPath.row]
             cell?.textLabel?.text = theAnswer
-            cell?.detailTextLabel?.text = "Correct"
+            cell?.detailTextLabel?.text = "\(name)"
             return cell!
         }
-        else if tableView == self.tableView2
-        {
+        else if tableView == self.tableView2 {
             let cell2 = tableView.dequeueReusableCell(withIdentifier: "cell2")
             let theAnswer = incorrectAnswers[indexPath.row]
             cell2?.textLabel?.text = theAnswer
-            cell2?.detailTextLabel?.text = "Incorrect"
+            cell2?.detailTextLabel?.text = "\(name)"
             return cell2!
         }
         return UITableViewCell()
     }
     
-    func readExistingAnswersArray(){
-        for int in 0 ... 100{
-        let documentreference = db.collection("responses").document("response\(int)")
-        
-        documentreference.getDocument { (document, error) in
+    func readExistingAnswersArray() {
+        for int in 0 ... 100 {
+            let documentreference = db.collection("responses").document("response\(int)")
+            documentreference.getDocument { (document, error) in
             if let document = document, document.exists {
                 let response = document.get("response")
                 print("Document data: \(response)")
@@ -101,8 +83,23 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
             } else {
                 print("Document does not exist")
             }
-            
+            }
         }
+    }
+    func readExistingNamesArray(){
+        for int in 0 ... 100{
+            let documentreference = db.collection("names").document("name\(int)")
+            
+            documentreference.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let aName = document.get("name")
+                    print("Document data: \(aName)")
+                    self.answers.append(aName as! String)
+                } else {
+                    print("Document does not exist")
+                }
+                
+            }
         }
     }
     

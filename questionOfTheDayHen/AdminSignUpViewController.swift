@@ -21,15 +21,11 @@ class AdminSignUpViewController: UIViewController {
     }
     
     @IBAction func signIN(_ sender: UIButton) {
-        var passwordOne = passwordTextField.text!
-        var passwordTwo = confirmPasswordTextField.text!
-        if passwordOne != passwordTwo
-        {
+        let passwordOne = passwordTextField.text!
+        let passwordTwo = confirmPasswordTextField.text!
+        if passwordOne != passwordTwo {
             sender.isHidden = true
-        }
-        else
-        {
-            
+        }else{
 //            Auth.auth().createUser(withEmail: (emailTextField.text ?? ""), password: (passwordTextField.text ?? "")) { (result, error) in
 //                if let _eror = error {
 //                    //something bad happning
@@ -39,13 +35,12 @@ class AdminSignUpViewController: UIViewController {
 //                    print(result)
 //                }
 //            }
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
-        {
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) {
             (authResult, error) in
             guard (authResult?.user) != nil else {return}
 
             self.dismiss(animated: true, completion: nil)
-        }
+            }
         }
     }
     

@@ -22,22 +22,18 @@ class AdminLoginViewController: UIViewController {
     }
     func correctInfo()
     {
-        var email = emailTextField.text
-        var password = passwordTextField.text
-        if (email == "") && password == ""
-        {
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        if email == "" && password == "" {
             logInButtonOutlet.isEnabled = false
         }
-        else if email != "" && password == ""
-        {
+        if email != "" && password == "" {
             logInButtonOutlet.isEnabled = false
         }
-        else if email == "" && password != ""
-        {
+        if email == "" && password != "" {
             logInButtonOutlet.isEnabled = false
         }
-        else if email != "" && password != ""
-        {
+        if email != "" && password != "" {
             logInButtonOutlet.isEnabled = true
         }
     }
@@ -52,7 +48,6 @@ class AdminLoginViewController: UIViewController {
     @IBAction func logInButton(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             guard (authResult?.user) != nil else {return}
-
             self.dismiss(animated: true, completion: nil)
 //            self.performSegue(withIdentifier: "segue", sender: UIButton())
         }

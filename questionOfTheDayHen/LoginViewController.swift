@@ -23,22 +23,18 @@ logInButtonOutlet.isEnabled = false
 }
     func correctInfo()
     {
-        var email = emailTextField.text
-        var password = passwordTextField.text
-        if (email == "") && password == ""
-        {
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        if (email == "") && password == "" {
             logInButtonOutlet.isEnabled = false
         }
-        else if email != "" && password == ""
-        {
+        if email != "" && password == "" {
             logInButtonOutlet.isEnabled = false
         }
-        else if email == "" && password != ""
-        {
+        if email == "" && password != "" {
             logInButtonOutlet.isEnabled = false
         }
-        else if email != "" && password != ""
-        {
+        if email != "" && password != "" {
             logInButtonOutlet.isEnabled = true
         }
     }
@@ -57,19 +53,16 @@ logInButtonOutlet.isEnabled = false
             else {
                 return
             }
-            
             self.dismiss(animated: true, completion: nil)
-            
 //            self.performSegue(withIdentifier: "segue", sender: UIButton())
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "segue"
-        {
+        if segue.identifier == "segue" {
             let nvc = segue.destination as! ClassesViewController
-            nvc.email = emailTextField.text!
+            nvc.name = emailTextField.text!
         }
     }
 }

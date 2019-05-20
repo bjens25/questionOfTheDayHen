@@ -24,19 +24,15 @@ class SignUpViewController: UIViewController {
     @IBAction func signIN(_ sender: UIButton) {
         var passwordOne = passwordTextField.text!
         var passwordTwo = confirmPasswordTextField.text!
-        if passwordOne != passwordTwo
-        {
-        sender.isHidden = true
+        if passwordOne != passwordTwo {
+            sender.isHidden = true
         }
-        else
-        {
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
-        {
-            (authResult, error) in
-            guard (authResult?.user) != nil else {return}
-            
-            self.dismiss(animated: true, completion: nil)
-        }
+        else {
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) {
+                (authResult, error) in
+                guard (authResult?.user) != nil else {return}
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
     

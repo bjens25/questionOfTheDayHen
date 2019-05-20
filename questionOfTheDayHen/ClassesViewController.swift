@@ -10,20 +10,18 @@ import UIKit
 
 class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var classes = [String]()
-    var email = String()
+    var classes = ["First Class"]
+    var name = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
 }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return classes.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = classes[indexPath.row]
         return cell
@@ -35,10 +33,9 @@ class ClassesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "segue"
-        {
+        if segue.identifier == "segue" {
             let nvc = segue.destination as! QuestionViewController
-            nvc.email = email
+            nvc.name = name
         }
     }
 }

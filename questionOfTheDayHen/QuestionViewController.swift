@@ -23,9 +23,10 @@ class QuestionViewController: UIViewController {
     
     var theCorrectAnswer: String!
     var answersArray = [String]()
-    var emailArray = [String]() 
-    var email = String()
+    var namesArray = [String]()
+    var name = String()
     var responseNumber = 0
+    var nameNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,29 +41,24 @@ class QuestionViewController: UIViewController {
         readQuestion()
         readCorrectAnswer()
         readExistingAnswersArray()
-//        answersArray.append(theCorrectAnswer)
+        readExistingNamesArray()
     }
 
     @IBAction func onATapped(_ sender: UIButton) {
-        db.collection("answerChoices").document("A")
-            .addSnapshotListener { documentSnapshot, error in
-                guard let document = documentSnapshot else {
-                    print("Error fetching document: \(error!)")
-                    return
-                }
-                guard let data = document.data() else {
-                    print("Document data was empty.")
-                    return
-                }
+        db.collection("answerChoices").document("A").addSnapshotListener { documentSnapshot, error in
+            guard let document = documentSnapshot else {
+                print("Error fetching document: \(error!)")
+                return
+            }
+            guard let data = document.data() else {
+                print("Document data was empty.")
+                return
+            }
                 print("Current data: \(data)")
         }
         answerLabel.text = "\(optionA.title(for: .normal)!)"
-//        answersArray.append("A: \(optionA.title(for: .normal)!)")
-//        if answersArray[0] == "A: \(optionA.title(for: .normal)!)"
-//        {
-//            adminCorrectAnswer.text = "A: \(optionA.title(for: .normal)!) is the Correct Answer."
-//        }
     }
+    
     @IBAction func onBTapped(_ sender: UIButton) {
         db.collection("answerChoices").document("B")
             .addSnapshotListener { documentSnapshot, error in
@@ -78,10 +74,6 @@ class QuestionViewController: UIViewController {
         }
         answerLabel.text = "Answer: \(optionB.title(for: .normal)!)"
         answerLabel.text = "\(optionB.title(for: .normal)!)"
-//        if answersArray[0] == "B: \(optionB.title(for: .normal)!)"
-//        {
-//            adminCorrectAnswer.text = "B: \(optionB.title(for: .normal)!) is the Correct Answer."
-//        }
     }
     
     @IBAction func onCTapped(_ sender: UIButton) {
@@ -99,10 +91,6 @@ class QuestionViewController: UIViewController {
         }
         answerLabel.text = "Answer: \(optionC.title(for: .normal)!)"
         answerLabel.text = "\(optionC.title(for: .normal)!)"
-//        if answersArray[0] == "C: \(optionC.title(for: .normal)!)"
-//        {
-//            adminCorrectAnswer.text = "C: \(optionC.title(for: .normal)!) is the Correct Answer."
-//        }
     }
     
     @IBAction func onDTapped(_ sender: UIButton) {
@@ -120,10 +108,6 @@ class QuestionViewController: UIViewController {
         }
         answerLabel.text = "Answer: \(optionD.title(for: .normal)!)"
         answerLabel.text = "\(optionD.title(for: .normal)!)"
-//        if answersArray[0] == "D: \(optionD.title(for: .normal)!)"
-//        {
-//            adminCorrectAnswer.text = "D: \(optionD.title(for: .normal)!) is the Correct Answer."
-//        }
     }
 
     
@@ -140,8 +124,7 @@ func readA()
             print("Document does not exist")
         }
         
-    }    }
-
+    }}
     
     func readB()
     {
@@ -156,7 +139,8 @@ func readA()
                 print("Document does not exist")
             }
             
-        }    }
+        }}
+    
     func readC()
     {
         let documentreference = db.collection("answerChoices").document("C")
@@ -170,7 +154,7 @@ func readA()
                 print("Document does not exist")
             }
             
-        }    }
+        }}
 
     func readQuestion()
     {
@@ -185,7 +169,8 @@ func readA()
                 print("Document does not exist")
             }
             
-        }    }
+        }}
+    
     func readD()
     {
         let documentreference = db.collection("answerChoices").document("D")
@@ -199,7 +184,8 @@ func readA()
                 print("Document does not exist")
             }
             
-        }    }
+        }}
+    
     func readCorrectAnswer()
     {
         let documentReference = db.collection("correctAnswer").document("correctAnswer")
@@ -213,57 +199,58 @@ func readA()
             } else {
                 print("Document does not exist")
             }
-
-    }
-    
-}
+    }}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "theSegue"
+        if segue.identifier == "segue"
         {
             let nvc = segue.destination as! ResponsesViewController
             nvc.answers = answersArray
+            nvc.name = name
         }
     }
     
     @IBAction func submitAnswer(_ sender: Any) {
         answersArray.append(answerLabel.text!)
+        namesArray.append(name)
         var myAnswer = answerLabel.text
         print(answersArray)
         appendToFirebase()
         responseNumber = answersArray.count
-        //is there an issue with redundancy?
+        nameNumber = answersArray.count
         if myAnswer == theCorrectAnswer{
             print("Correct!")
         }
         else{
             print("Incorrect")
         }
-        
     }
 
     func appendToFirebase(){
-        for value in answersArray{
-            let db = Firestore.firestore()
-            db.collection("responses").document("response\(responseNumber)").setData([
-                "response" : value
-                ]) {(error: Error?) in
-                if let error = error {
-                    print("\(error.localizedDescription)")
-                    print("something not right")
-                }else{
-                    print("Document was successfully created and written.")
+        let db = Firestore.firestore()
+        for value in answersArray {
+            db.collection("responses").document("response\(responseNumber)").setData(["response" : value]) {(error: Error?) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                print("something not right")
+            }else{
+                print("Document was successfully created and written.")
                 }
-            }
-        
-        }
+            }}
+        for value in namesArray{
+            db.collection("names").document("name\(nameNumber)").setData(["name" : value]) {(error: Error?) in
+            if let error = error {
+                print("\(error.localizedDescription)")
+                print("something not right")
+            }else{
+                print("Document was successfully created and written.")
+                }
+            }}
     }
 
     func readExistingAnswersArray(){
         for int in 0 ... 100{
-            //how can this be worked around? (that it can only take a certain number of responses)
-            //also now will have to discard documents when new question presented?
             let documentreference = db.collection("responses").document("response\(int)")
             
             documentreference.getDocument { (document, error) in
@@ -275,17 +262,20 @@ func readA()
                     print("Document does not exist")
                 }
                 
-            }
-        }
-    }
-
-//
-//    func alert()
-//    {
-//        let alert = UIAlertController(title: "We Need A Correct Answer", message: "Please select the option that is correct now.", preferredStyle: .alert)
-//        let OKAction = UIAlertAction(title: "OK", style: .default)
-//        alert.addAction(OKAction)
-//        self.present(alert, animated: true, completion: nil)
-//        }
+            }}}
     
+    func readExistingNamesArray(){
+        for int in 0 ... 100{
+            let documentreference = db.collection("names").document("name\(int)")
+            
+            documentreference.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let aName = document.get("name")
+                    print("Document data: \(aName)")
+                    self.namesArray.append(aName as! String)
+                } else {
+                    print("Document does not exist")
+                }
+                
+            }}}
 }

@@ -27,15 +27,15 @@ class AdminQuestionViewController: UIViewController {
 
     @IBAction func publishToClassOnTap(_ sender: UIButton)
     {
-        var answerA = adminA.text
-        var answerB = adminB.text
-        var answerC = adminC.text
-        var answerD = adminD.text
-        var correct = adminCorrect.text
+        let answerA = adminA.text
+        let answerB = adminB.text
+        let answerC = adminC.text
+        let answerD = adminD.text
+        let correct = adminCorrect.text
         
         let db = Firestore.firestore()
-db.collection("answerChoices").document("A").setData(["A": answerA
-        ]) {(error: Error?) in
+
+        db.collection("answerChoices").document("A").setData(["A": answerA]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
                 print("something not right")
@@ -43,8 +43,7 @@ db.collection("answerChoices").document("A").setData(["A": answerA
                 print("Document was successfully created and written.")
             }
         }
-db.collection("answerChoices").document("B").setData(["B": answerB
-    ]) {(error: Error?) in
+        db.collection("answerChoices").document("B").setData(["B": answerB]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
                 print("something not right")
@@ -52,8 +51,7 @@ db.collection("answerChoices").document("B").setData(["B": answerB
                 print("Document was successfully created and written.")
             }
         }
-db.collection("answerChoices").document("C").setData(["C": answerC
-        ]) {(error: Error?) in
+        db.collection("answerChoices").document("C").setData(["C": answerC]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
                 print("something not right")
@@ -61,16 +59,14 @@ db.collection("answerChoices").document("C").setData(["C": answerC
                 print("Document was successfully created and written.")
             }
         }
-db.collection("answerChoices").document("D").setData(["D": answerD
-        ]) {(error: Error?) in
+        db.collection("answerChoices").document("D").setData(["D": answerD]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
                 print("something not right")
             }else{
                 print("Document was successfully created and written.")
             }}
-db.collection("question").document("question").setData(["question" :adminQuestion.text])
-        {(error: Error?) in
+        db.collection("question").document("question").setData(["question" : adminQuestion.text]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
                 print("something not right")
@@ -87,7 +83,7 @@ db.collection("question").document("question").setData(["question" :adminQuestio
                 }else{
                     print("Document was successfully created and written.")
                 }
-        }
+            }
         }
         if correct == answerB {
             db.collection("correctAnswer").document("correctAnswer").setData(["correctAnswer" : correct
@@ -122,70 +118,20 @@ db.collection("question").document("question").setData(["question" :adminQuestio
                         }
                     }
             }
-//        switch segmentedControl.selectedSegmentIndex
-//        {
-//        case 0:
-//            db.collection("answerChoices").document("correctAnswer").setData(["A": answerA
-//            ]) {(error: Error?) in
-//                if let error = error {
-//                    print("\(error.localizedDescription)")
-//                    print("something not right")
-//                }else{
-//                    print("Document was successfully created and written.")
-//                }}
-//        case 1:
-//            db.collection("answerChoices").document("correctAnswer").setData(["B": answerB
-//            ]) {(error: Error?) in
-//                if let error = error {
-//                    print("\(error.localizedDescription)")
-//                    print("something not right")
-//                }else{
-//                    print("Document was successfully created and written.")
-//                }}
-//        case 2:
-//            db.collection("answerChoices").document("correctAnswer").setData(["C": answerC]) {(error: Error?) in
-//                if let error = error {
-//                    print("\(error.localizedDescription)")
-//                    print("something not right")
-//                }else{
-//                    print("Document was successfully created and written.")
-//                }}
-//        case 3:
-//            db.collection("answerChoices").document("correctAnswer").setData(["D": answerD]){(error: Error?) in
-//                if let error = error {
-//                    print("\(error.localizedDescription)")
-//                    print("something not right")
-//                }else{
-//                    print("Document was successfully created and written.")
-//                }}
-//        default:
-//            break
-//        }
+
     }
-//    @IBAction func updateAnswers(_ sender: UIButton) {
-//        segmentedControl.setTitle("\(adminA.text!)", forSegmentAt: 0)
-//        segmentedControl.setTitle("\(adminB.text!)", forSegmentAt: 1)
-//        segmentedControl.setTitle("\(adminC.text!)", forSegmentAt: 2)
-//        segmentedControl.setTitle("\(adminD.text!)", forSegmentAt: 3)
-//
-//    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-//        var correctAnswer = "\(segmentedControl.titleForSegment(at: segmentedControl.selectedSegmentIndex)!)"
-        if segue.identifier == "segue"
-        {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue" {
             let nvc = segue.destination as! QuestionViewController
-            for int in 0...100{
-            nvc.db.collection("responses").document("response\(int)").delete() { err in
+            for int in 0...100 {
+                nvc.db.collection("responses").document("response\(int)").delete() { err in
                 if let err = err {
                     print("Error removing document: \(err)")
                 } else {
                     print("Document successfully removed!")
-                }
-            
+                }}
             }
-            }     //            nvc.answersArray = ["\(correctAnswer)"]
         }
     }
     
