@@ -12,7 +12,8 @@ import FirebaseFirestore
 
 class QuestionViewController: UIViewController {
     
-    @IBOutlet weak var optionA: UIButton!    
+    @IBOutlet weak var correctLabel: UILabel!
+    @IBOutlet weak var optionA: UIButton!
     @IBOutlet weak var optionD: UIButton!
     @IBOutlet weak var optionC: UIButton!
     @IBOutlet weak var optionB: UIButton!
@@ -221,9 +222,11 @@ func readA()
         nameNumber = answersArray.count
         if myAnswer == theCorrectAnswer{
             print("Correct!")
+            correctLabel.text! = "Correct!"
         }
         else{
             print("Incorrect")
+            correctLabel.text! = "Incorrect!"
         }
     }
 

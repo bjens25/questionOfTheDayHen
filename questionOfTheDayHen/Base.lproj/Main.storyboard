@@ -428,6 +428,13 @@
                                     <segue destination="HCk-Vv-iax" kind="show" identifier="segue" id="I7k-bw-sRL"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdR-qt-ASR">
+                                <rect key="frame" x="163" y="391" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -461,6 +468,7 @@
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="TLo-tr-Kd2" id="qrq-I2-weC"/>
+                        <outlet property="correctLabel" destination="tdR-qt-ASR" id="rJ8-It-oUu"/>
                         <outlet property="optionA" destination="W0H-tU-Iz7" id="7Q8-gh-YXc"/>
                         <outlet property="optionB" destination="8YL-FU-FFh" id="0L8-a4-9ND"/>
                         <outlet property="optionC" destination="2dS-dJ-WHS" id="t3v-kA-ACi"/>
@@ -1068,6 +1076,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="VdO-tL-1RW"/>
         <segue reference="w3N-4e-8mg"/>
         <segue reference="4Un-98-dtv"/>
         <segue reference="DI0-2D-n6u"/>
