@@ -131,6 +131,9 @@ class AdminQuestionViewController: UIViewController {
                 } else {
                     print("Document successfully removed!")
                 }}
+                
+            }
+            for int in 1...100{
                 nvc.db.collection("names").document("name\(int)").delete() { err in
                     if let err = err {
                         print("Error removing document: \(err)")

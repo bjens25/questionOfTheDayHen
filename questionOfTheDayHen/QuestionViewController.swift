@@ -232,7 +232,7 @@ class QuestionViewController: UIViewController {
                 }
             }}
         for value in namesArray{
-            db.collection("names").document("name\(nameNumber)").setData(["name" : value]) {(error: Error?) in
+            db.collection("names").document("name\(nameNumber + 1)").setData(["name" : value]) {(error: Error?) in
             if let error = error {
                 print("\(error.localizedDescription)")
                 print("something not right")
@@ -243,7 +243,7 @@ class QuestionViewController: UIViewController {
     }
 
     func readExistingAnswersArray(){
-        for int in responseNumber ... 100{
+        for int in 0 ... 100{
             let documentreference = db.collection("responses").document("response\(int)")
             documentreference.getDocument { (document, error) in
                 if let document = document, document.exists {
@@ -257,7 +257,7 @@ class QuestionViewController: UIViewController {
             }}}
     
     func readExistingNamesArray(){
-        for int in responseNumber ... 100{
+        for int in 0 ... 100{
             let documentreference = db.collection("names").document("name\(int)")
             documentreference.getDocument { (document, error) in
                 if let document = document, document.exists {
