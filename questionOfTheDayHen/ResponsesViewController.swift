@@ -27,7 +27,9 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        readExistingAnswersArray()
         print(answers)
+        print(names)
         gradeAnswers()
 
     }
@@ -81,7 +83,7 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func readExistingAnswersArray() {
         for int in 0 ... 100 {
-            let documentreference = db.collection("responses").document("response\(int)")
+            var documentreference = db.collection("responses").document("response\(int)")
             documentreference.getDocument { (document, error) in
             if let document = document, document.exists {
                 let response = document.get("response")
@@ -91,22 +93,22 @@ class ResponsesViewController: UIViewController, UITableViewDelegate, UITableVie
                 print("Document does not exist")
             }
             }
-            let documentreference2 = db.collection("names").document("name\(int)")
-            
-            documentreference2.getDocument { (document, error) in
-                if let document = document, document.exists {
-                    let aName = document.get("name")
-                    print("Document data: \(aName)")
-                    self.names.append(aName as! String)
-                } else {
-                    print("Document does not exist")
-                }
-                
-            }
         }
+        
     }
     func readExistingNamesArray(){
-        
+        for int in 0...100{
+        let documentreference = db.collection("names").document("name\(int)")
+        documentreference.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let name = document.get("name")
+                print("Document data: \(name)")
+                self.names.append(name as! String)
+            } else {
+                print("Document does not exist")
+            }
+        }
+        }
     }
     
 

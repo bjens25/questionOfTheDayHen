@@ -61,8 +61,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func onBTapped(_ sender: UIButton) {
-        db.collection("answerChoices").document("B")
-            .addSnapshotListener { documentSnapshot, error in
+        db.collection("answerChoices").document("B").addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
                     print("Error fetching document: \(error!)")
                     return
@@ -78,8 +77,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func onCTapped(_ sender: UIButton) {
-        db.collection("answerChoices").document("C")
-            .addSnapshotListener { documentSnapshot, error in
+        db.collection("answerChoices").document("C").addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
                     print("Error fetching document: \(error!)")
                     return
@@ -95,8 +93,7 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func onDTapped(_ sender: UIButton) {
-        db.collection("answerChoices").document("D")
-            .addSnapshotListener { documentSnapshot, error in
+        db.collection("answerChoices").document("D").addSnapshotListener { documentSnapshot, error in
                 guard let document = documentSnapshot else {
                     print("Error fetching document: \(error!)")
                     return
@@ -112,11 +109,9 @@ class QuestionViewController: UIViewController {
     }
 
     
-func readA()
-{
-    let documentreference = db.collection("answerChoices").document("A")
-    
-    documentreference.getDocument { (document, error) in
+    func readA() {
+        let documentreference = db.collection("answerChoices").document("A")
+        documentreference.getDocument { (document, error) in
         if let document = document, document.exists {
             let answerA = document.get("A")
             print("Document data: \(answerA)")
@@ -127,35 +122,29 @@ func readA()
         
     }}
     
-    func readB()
-    {
+    func readB(){
         let documentreference = db.collection("answerChoices").document("B")
-        
         documentreference.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let answerB = document.get("B")
-                print("Document data: \(answerB)")
-                self.optionB.setTitle(answerB as! String, for: .normal)
-            } else {
-                print("Document does not exist")
-            }
-            
-        }}
+        if let document = document, document.exists {
+            let answerB = document.get("B")
+            print("Document data: \(answerB)")
+            self.optionB.setTitle(answerB as! String, for: .normal)
+        } else {
+            print("Document does not exist")
+        }
+    }}
     
-    func readC()
-    {
+    func readC() {
         let documentreference = db.collection("answerChoices").document("C")
-        
         documentreference.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let answerC = document.get("C")
-                print("Document data: \(answerC)")
-                self.optionC.setTitle(answerC as! String, for: .normal)
-            } else {
-                print("Document does not exist")
-            }
-            
-        }}
+        if let document = document, document.exists {
+            let answerC = document.get("C")
+            print("Document data: \(answerC)")
+            self.optionC.setTitle(answerC as! String, for: .normal)
+        } else {
+            print("Document does not exist")
+        }
+    }}
 
     func readQuestion()
     {
@@ -209,6 +198,7 @@ func readA()
             let nvc = segue.destination as! ResponsesViewController
             nvc.answers = answersArray
             nvc.name = name
+            nvc.names = namesArray
         }
     }
     
@@ -253,9 +243,8 @@ func readA()
     }
 
     func readExistingAnswersArray(){
-        for int in 0 ... 100{
+        for int in responseNumber ... 100{
             let documentreference = db.collection("responses").document("response\(int)")
-            
             documentreference.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let response = document.get("response")
@@ -268,14 +257,13 @@ func readA()
             }}}
     
     func readExistingNamesArray(){
-        for int in 0 ... 100{
+        for int in responseNumber ... 100{
             let documentreference = db.collection("names").document("name\(int)")
-            
             documentreference.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    let aName = document.get("name")
-                    print("Document data: \(aName)")
-                    self.namesArray.append(aName as! String)
+                    let name = document.get("name")
+                    print("Document data: \(name)")
+                    self.namesArray.append(name as! String)
                 } else {
                     print("Document does not exist")
                 }
