@@ -43,6 +43,7 @@ class QuestionViewController: UIViewController {
         readCorrectAnswer()
         readExistingAnswersArray()
         readExistingNamesArray()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "blue-fade-short")!)
     }
 
     @IBAction func onATapped(_ sender: UIButton) {
